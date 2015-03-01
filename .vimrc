@@ -3,7 +3,6 @@ set modelines=0		" CVE-2007-2438
 set incsearch
 set cursorline
 
-set modifiable
 
 " Normally we use vim-extensions. If you want true vi-compatibility
 " remove change the following statements
@@ -12,8 +11,18 @@ set backspace=2		" more powerful backspacing
 " タブを表示するときの幅
 set tabstop=4
 set autoindent
-set expandtab
+" set expandtab
 set shiftwidth=4
+
+
+" 開いたソースを自動で折りたたみ
+autocmd FileType javascript :set foldmethod=indent
+autocmd FileType javascript :set foldlevel=1
+autocmd FileType javascript :set foldnestmax=2
+
+" Macのクリップボードにヤンク
+set clipboard=unnamed,autoselect
+
 " Don't write backup file if vim is being called by "crontab -e"
 au BufWrite /private/tmp/crontab.* set nowritebackup
 " Don't write backup file if vim is being called by "chpass"
@@ -46,6 +55,7 @@ endif
 set nocompatible               " be iMproved
 filetype off
 
+" 行数の表示
 set number
 
 if has('vim_starting')
@@ -55,6 +65,7 @@ endif
 " originalrepos on github
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc'
+NeoBundle 'lilydjwg/colorizer'
 NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'VimClojure'
 NeoBundle 'Shougo/vimshell'
@@ -63,53 +74,44 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'https://github.com/omega/vim-deckset.git'
-NeoBundle 'https://github.com/nathanaelkane/vim-indent-guides.git'   " インデント色付け
 NeoBundle 'https://github.com/pangloss/vim-javascript.git' " jsのインデントとかなおすやつ
 NeoBundle 'Lokaltog/vim-powerline'            " ステータスライン
 NeoBundle 'pekepeke/titanium-vim'             " Titanium
 NeoBundle 'localrc.vim' " vimのインデントをディレクトリごとに調整
+NeoBundle 'scrooloose/syntastic.git' " 構文エラーを自動で出力
 filetype plugin indent on     " required!
 syntax on
+
 
 "" SuperTab like snippets behavior.
 "
 let g:neocomplcache_enable_at_startup = 1
 
+
+" NERDtree設定
 NeoBundle 'scrooloose/nerdtree'
 let NERDTreeShowHidden = 1
 let file_name = expand("%:p")
 if has('vim_starting') &&  file_name == ""
 	autocmd VimEnter * execute 'NERDTree ./'
 endif
+let g:NERDTreeWinSize=20
 
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#121212 ctermbg=233
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#262626 ctermbg=235
-let g:indent_guides_enable_on_vim_startup = 1
 
 " 検索時のハイライト
 set hlsearch
 
-" Load settings for each location.
-augroup vimrc-local
-  autocmd!
-  autocmd BufNewFile,BufReadPost * call s:vimrc_local(expand('<afile>:p:h'))
-augroup END
+" ファイル保存時にsyntaxチェック
+let g:syntastic_mode_map = {
+  \ 'mode': 'active',
+  \ 'active_filetypes': ['javascript'],
+  \ 'passive_filetypes': ['html']
+  \}
+let g:syntastic_auto_loc_list = 1
 
-function! s:vimrc_local(loc)
-  let files = findfile('.lvimrc', escape(a:loc, ' ') . ';', -1)
-  for i in reverse(filter(files, 'filereadable(v:val)'))
-    source `=i`
-  endfor
-endfunction
 
-"less補完
-NeoBundle 'git://github.com/groenewege/vim-less.git'
-autocmd BufNewFile,BufRead *.less set filetype=css
-
-if !has('gui_running')
-    set notimeout
-    set ttimeout
-    set timeoutlen=100
-endif
+" 不可視文字の表示
+set list
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
+hi NonText guibg=NONE guifg=DarkGreen
+hi SpecialKey ctermfg=235

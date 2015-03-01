@@ -5,7 +5,7 @@ export ZSH=/Users/sawadatakayoshi/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 # ZSHのプラグインを指定
-plugins=(git ruby osx bundler brew rails emoji-clock)
+plugins=(git svn ruby osx bundler brew rails emoji-clock)
 
 # User configuration
 export PATH="/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin/:/Users/sawadatakayoshi/.gem/ruby/2.0.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/opt/ImageMagick/bin:/developer/android-sdks/tools"
@@ -14,6 +14,12 @@ export PATH="/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin/:/Use
 source $ZSH/oh-my-zsh.sh
 
 ##### ここから個人設定 ######
+
+# nvmの読み込み
+source ~/.nvm/nvm.sh
+nvm use "v0.10.36"
+npm_dir=${NVM_PATH}_modules
+export NODE_PATH=$npm_dir
 
 # lsに色を付ける
 alias ls='ls -G'
