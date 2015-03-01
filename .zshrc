@@ -21,6 +21,10 @@ nvm use "v0.10.36"
 npm_dir=${NVM_PATH}_modules
 export NODE_PATH=$npm_dir
 
+# grepに色をつける
+export GREP_COLOR='1;37;41'
+alias grep='grep -E --color=auto'
+
 # lsに色を付ける
 alias ls='ls -G'
 
