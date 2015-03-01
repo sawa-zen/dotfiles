@@ -1,0 +1,6 @@
+{
+    "evil": true,
+    "unused" : true,
+    "curly": true,
+    "camelcase": true
+}
