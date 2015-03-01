@@ -1,5 +1,5 @@
 # ZSHの環境変数を設定
-export ZSH=/Users/sawadatakayoshi/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # ZSHのテーマを設定
 ZSH_THEME="robbyrussell"
@@ -8,7 +8,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git svn ruby osx bundler brew rails emoji-clock)
 
 # User configuration
-export PATH="/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin/:/Users/sawadatakayoshi/.gem/ruby/2.0.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/opt/ImageMagick/bin:/developer/android-sdks/tools"
+export PATH="/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin/:/Users/$HOME/.gem/ruby/2.0.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/opt/ImageMagick/bin:/developer/android-sdks/tools"
 
 # oh-my-zsh.shのシェルを読み込み
 source $ZSH/oh-my-zsh.sh
@@ -17,7 +17,6 @@ source $ZSH/oh-my-zsh.sh
 
 # nvmの読み込み
 source ~/.nvm/nvm.sh
-nvm use "v0.10.36"
 npm_dir=${NVM_PATH}_modules
 export NODE_PATH=$npm_dir
 
