@@ -1,5 +1,4 @@
 {
-	"strict" : true,  // "use strict" を強制
 	"maxlen" : 150,  // 一行の最大長
 	"unused" : true,  // 宣言したきり使っていない変数を検出
 
@@ -10,11 +9,16 @@
 	"devel" : true,  //  consoleやalertを許可
 	"debug"    : true,  // debugger を許可
 	"globals": {
-		"_": false,
+		"_": true,
+		"module": false,
+		"L": false,
+		"Ti": false,
+		"Titanium": false,
 		"Backbone": false
 	},
 
 	// Relaxing Options - 危険性を認識した上で設定すること
+	"sub": true, // array['hoge_huga']みたいな表記を許す
 	"eqnull" : true,  // == null を許可
 	"expr" : true  // x || (x = 1); とかができるようにする
 }
