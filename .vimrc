@@ -79,7 +79,6 @@ NeoBundle 'Lokaltog/vim-powerline'            " ステータスライン
 NeoBundle 'pekepeke/titanium-vim'             " Titanium
 NeoBundle 'localrc.vim' " vimのインデントをディレクトリごとに調整
 NeoBundle 'scrooloose/syntastic.git' " 構文エラーを自動で出力
-NeoBundle 'Townk/vim-autoclose' " 自動で括弧を閉じる
 NeoBundle 'grep.vim' " grepを便利にしてくれる子
 filetype plugin indent on     " required!
 syntax on
