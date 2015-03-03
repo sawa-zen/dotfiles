@@ -116,3 +116,6 @@ set list
 set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
 hi NonText guibg=NONE guifg=DarkGreen
 hi SpecialKey ctermfg=235
+
+" mdファイルをmarkdownファイルとして認識させる
+au BufNewFile,BufRead *.md :set filetype=markdown
