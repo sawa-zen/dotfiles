@@ -37,7 +37,7 @@ alias aaaa="ti build -p android -C 'Samsung Galaxy S4 - 4.4.4 - API 19 - 1080x19
 alias aaaad="titanium build -p android --log-level trace --target device"
 
 # titanium Retina 4.5-inch
-alias tttt='ti build -p ios -C 559E0D73-1F3A-443D-96EE-0053211F7430 --log-level debug'
+alias tttt='ti build -p ios -T simulator --log-level debug --retina --tall --sim-64bit'
 
 # ファイルの拡張子指定の検索コマンド
 function ff (){
