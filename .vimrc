@@ -80,6 +80,7 @@ NeoBundle 'pekepeke/titanium-vim'             " Titanium
 NeoBundle 'localrc.vim' " vimのインデントをディレクトリごとに調整
 NeoBundle 'scrooloose/syntastic.git' " 構文エラーを自動で出力
 NeoBundle 'grep.vim' " grepを便利にしてくれる子
+NeoBundle 'airblade/vim-gitgutter' " gitの差分を表示するぜ
 filetype plugin indent on     " required!
 syntax on
 
