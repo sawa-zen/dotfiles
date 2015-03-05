@@ -13,3 +13,6 @@ export PATH=$PATH:/usr/local/mysql/bin
 
 # svnのコミットコメントエディタをvimに
 export SVN_EDITOR=vim
+
+# rbenvの設定
+eval "$(rbenv init -)"
