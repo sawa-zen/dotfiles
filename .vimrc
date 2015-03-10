@@ -80,6 +80,7 @@ NeoBundle 'pekepeke/titanium-vim'             " Titanium
 NeoBundle 'localrc.vim' " vimのインデントをディレクトリごとに調整
 NeoBundle 'scrooloose/syntastic.git' " 構文エラーを自動で出力
 NeoBundle 'grep.vim' " grepを便利にしてくれる子
+NeoBundle 'airblade/vim-gitgutter' " gitの差分を表示するぜ
 filetype plugin indent on     " required!
 syntax on
 
@@ -119,3 +120,18 @@ hi SpecialKey ctermfg=235
 
 " mdファイルをmarkdownファイルとして認識させる
 au BufNewFile,BufRead *.md :set filetype=markdown
+
+
+" 自動的に閉じ括弧を入力
+imap { {}<LEFT>
+imap [ []<LEFT>
+imap ( ()<LEFT>
+
+
+" 最後のカーソル位置を復元する
+if has("autocmd")
+    autocmd BufReadPost *
+    \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+    \   exe "normal! g'\"" |
+    \ endif
+endif
