@@ -7,7 +7,8 @@
 	"browser" : true,  // ブラウザ用のやつは許可
 	"dojo" :  true,  // dojo tool kit用のやつは許可
 	"devel" : true,  //  consoleやalertを許可
-	"debug"    : true,  // debugger を許可
+	"debug" : true,  // debugger を許可,
+	"evil" : true, //evalを許可
 	"globals": {
 		"_": true,
 		"module": false,
