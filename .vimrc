@@ -15,6 +15,18 @@ set autoindent
 set shiftwidth=4
 
 
+" 行を強調表示
+set cursorline
+" 列を強調表示
+set cursorcolumn
+
+" 80文字で赤線
+set textwidth=0
+if exists('&colorcolumn')
+  set colorcolumn=+1
+  autocmd FileType sh,perl,vim,ruby,python,javascript setlocal textwidth=80
+endif
+
 " 開いたソースを自動で折りたたみ
 autocmd FileType javascript :set foldmethod=indent
 autocmd FileType javascript :set foldlevel=1
