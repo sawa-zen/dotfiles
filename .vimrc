@@ -93,6 +93,7 @@ NeoBundle 'localrc.vim' " vimのインデントをディレクトリごとに調
 NeoBundle 'scrooloose/syntastic.git' " 構文エラーを自動で出力
 NeoBundle 'grep.vim' " grepを便利にしてくれる子
 NeoBundle 'airblade/vim-gitgutter' " gitの差分を表示するぜ
+NeoBundle 'thinca/vim-quickrun' " quickrunの実行
 filetype plugin indent on     " required!
 syntax on
 
