@@ -77,7 +77,7 @@ endif
 " originalrepos on github
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc'
-NeoBundle 'lilydjwg/colorizer'
+NeoBundle 'lilydjwg/colorizer' " カラーコードを色付きでハイライト
 NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'VimClojure'
 NeoBundle 'Shougo/vimshell'
