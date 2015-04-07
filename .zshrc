@@ -9,7 +9,7 @@ plugins=(git svn ruby osx bundler brew rails emoji-clock)
 
 # User configuration
 export PATH="/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin/:/Users/$HOME/.gem/ruby/2.0.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/opt/ImageMagick/bin:/developer/android-sdks/tools"
-
+ 
 # oh-my-zsh.shのシェルを読み込み
 source $ZSH/oh-my-zsh.sh
 
