@@ -1,18 +1,23 @@
 [alias]
 	# いい感じのグラフでログを表示
-	graph = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
-	# 上の省略形
-	gr = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+	graph = log --graph --oneline --decorate=full
 	st = status
-	cm = commit
+	ci = commit
 	 # Untracked filesを表示せず，not stagedと，stagedだけの状態を出力する
 	stt = status -uno
 	# 行ごとの差分じゃなくて，単語レベルでの差分を色付きで表示する
 	difff = diff --word-diff
+[core]
+	editor = vim -c \"set fenc=utf-8\"
+	excludesfile = /Users/sawadatakayoshi/.gitignore
 [diff]
 	external = git_diff_wrapper
 [pager]
 	diff =
 [user]
-	name = SAWADA Takayoshi
+	name = sawada
 	email = sawadasuiren@gmail.com
+[color]
+	ui = auto
+[credential]
+	helper = osxkeychain
