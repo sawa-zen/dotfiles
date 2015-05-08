@@ -85,8 +85,10 @@ NeoBundle 'thinca/vim-quickrun' " quickrunの実行
 NeoBundle 'taichouchou2/vim-javascript'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
-call neobundle#end()
+NeoBundle 'bling/vim-airline'
+NeoBundle 'scrooloose/nerdtree'
 filetype plugin indent on     " required!
+call neobundle#end()
 syntax on
 " ====================================== "
 " Plugin key-mappings.
@@ -105,7 +107,6 @@ endif
 
 
 " =================== ステータスバー =======================
-NeoBundle 'bling/vim-airline'
 " letirline_section_a = airline#section#create(['mode','','branch'])
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
@@ -126,7 +127,6 @@ let g:airline#extensions#tabline#left_alt_sep = ''
 
 
 " NERDtree設定
-NeoBundle 'scrooloose/nerdtree'
 let NERDTreeShowHidden = 1
 let file_name = expand("%:p")
 if has('vim_starting') &&  file_name == ""
