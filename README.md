@@ -12,7 +12,7 @@ npm install -g jshint
 
 ## NeoBundleのインストール
 ```terminal
-mkdir -p ~.vim/bundle
+mkdir -p ~./vim/bundle
 git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ```
 vimの画面でNeoBundleのプラグインをインストール
