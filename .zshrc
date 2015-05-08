@@ -7,9 +7,6 @@ ZSH_THEME="robbyrussell"
 # ZSHのプラグインを指定
 plugins=(git svn ruby osx bundler brew rails emoji-clock)
 
-# User configuration
-export PATH="/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin/:/Users/$HOME/.gem/ruby/2.0.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/opt/ImageMagick/bin:/developer/android-sdks/tools"
- 
 # oh-my-zsh.shのシェルを読み込み
 source $ZSH/oh-my-zsh.sh
 
@@ -42,9 +39,4 @@ alias tttt='ti build -p ios -T simulator --log-level debug --retina --tall --sim
 # ファイルの拡張子指定の検索コマンド
 function ff (){
     find . -type f -name "*.$1" | xargs grep -n "$2"
-}
-
-# tmuxのwindowに名前をつける
-function title {
-    echo -ne "\033]0;"$*"\007"
 }
