@@ -40,3 +40,6 @@ alias tttt='ti build -p ios -T simulator --log-level debug --retina --tall --sim
 function ff (){
     find . -type f -name "*.$1" | xargs grep -n "$2"
 }
+
+# Androidのddmsのalias
+alias ddms='/Users/sawada/Library/android-sdk-macosx/tools/ddms'

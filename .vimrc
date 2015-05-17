@@ -88,7 +88,6 @@ NeoBundle 'mxw/vim-jsx'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'scrooloose/nerdtree'
 filetype plugin indent on     " required!
-call neobundle#end()
 syntax on
 " ====================================== "
 " Plugin key-mappings.
@@ -166,4 +165,5 @@ if has("autocmd")
     \ endif
 endif
 
+call neobundle#end()
 let g:syntastic_javascript_checkers = ['eslint']
