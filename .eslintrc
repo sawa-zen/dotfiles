@@ -15,5 +15,43 @@
   "rules": {
     "quotes": [2, "single"],
     "no-underscore-dangle": false
+    "strict" : false,
+    "new-cap": false,
+    "camelcase": 0,
+    "no-use-before-define": 0,
+    "dot-notation": 0,
+    "consistent-return": 0,
+    "no-trailing-spaces": false,
+    "key-spacing": false
+  },
+  "globals": {
+      "_"		: true,
+      "module"	: false,
+      "L"		: false,
+      "Ti"		: false,
+      "Titanium": false,
+      "Backbone": false
+  },
+  "ecmaFeatures": {
+    "arrowFunctions": true,
+    "binaryLiterals": true,
+    "blockBindings": true,
+    "classes": true,
+    "defaultParams": true,
+    "forOf": true,
+    "generators": true,
+    "modules": true,
+    "objectLiteralComputedProperties": true,
+    "objectLiteralDuplicateProperties": true,
+    "objectLiteralShorthandMethods": true,
+    "objectLiteralShorthandProperties": true,
+    "octalLiterals": true,
+    "regexUFlag": true,
+    "regexYFlag": true,
+    "superInFunctions": true,
+    "templateStrings": true,
+    "unicodeCodePointEscapes": true,
+    "globalReturn": true,
+    "jsx": true
   }
 }
