@@ -43,3 +43,6 @@ function ff (){
 
 # Androidのddmsのalias
 alias ddms='/Users/sawada/Library/android-sdk-macosx/tools/ddms'
+
+# 一個のペインで使えるリミットの制限をあげる
+ulimit -n 10000
