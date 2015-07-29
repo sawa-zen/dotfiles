@@ -103,6 +103,9 @@ set ttymouse=xterm2
 " ステータスラインは下から2行までとする
 set laststatus=2
 
+" 行末の余分なスペースを保存時に削除
+autocmd BufWritePre * :%s/\s\+$//ge
+
 " JavaScriptの構文チェックはeslintで行う
 let g:syntastic_javascript_checkers = ['eslint']
 " ファイル保存時にsyntaxチェック
