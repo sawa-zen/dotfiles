@@ -101,7 +101,7 @@ set ttymouse=xterm2
 
 " airlineも表示したいので
 " ステータスラインは下から2行までとする
-set laststatus=2  
+set laststatus=2
 
 " JavaScriptの構文チェックはeslintで行う
 let g:syntastic_javascript_checkers = ['eslint']
