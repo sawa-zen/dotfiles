@@ -1,5 +1,5 @@
 """"""""""""""""""""
-" NeoBundle 
+" NeoBundle
 """"""""""""""""""""
 
 " NeoBundleを最初に読み込むように設定
@@ -41,7 +41,7 @@ NeoBundleCheck
 
 
 """"""""""""""""""""
-" Basic Setting for Vim 
+" Basic Setting for Vim
 """"""""""""""""""""
 
 " シンタックスハイライトを許可
@@ -83,7 +83,7 @@ set cursorline
 " 列を強調表示
 set cursorcolumn
 
-" 文字列の自動改行を禁止 
+" 文字列の自動改行を禁止
 set textwidth=0
 " 80文字で赤線
 if exists('&colorcolumn')
@@ -121,7 +121,7 @@ let g:syntastic_auto_loc_list = 1
 
 
 """"""""""""""""""""
-" Hilight for Some Languages 
+" Hilight for Some Languages
 """"""""""""""""""""
 
 " mdファイルをmarkdownファイルとして認識させる
@@ -205,9 +205,10 @@ set guifont=Ricty\ Regular\ for\ Powerline:h14
 let g:Powerline_symbols = 'fancy'
 set t_Co=256
 let g:airline_theme='badwolf'
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
-
+let g:airline_left_sep = '⮀'
+let g:airline_right_sep = '⮂'
+"let g:airline_linecolumn_prefix = '⭡'
+"let g:airline_branch_prefix = '⭠'
+let g:airline#extensions#tabline#left_sep = '⮀'
+let g:airline#extensions#tabline#left_alt_sep = '⮀'
 """"""""""""""""""""
