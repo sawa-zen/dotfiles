@@ -23,7 +23,8 @@ NeoBundle 'thinca/vim-quickrun' " quickrunの実行
 NeoBundle 'taichouchou2/vim-javascript'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
-NeoBundle 'bling/vim-airline'
+NeoBundle 'bling/vim-airline' " ステータスバー
+NeoBundle 'tpope/vim-fugitive' " branch表示
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'chase/vim-ansible-yaml'
 call neobundle#end()
@@ -98,10 +99,6 @@ set clipboard=unnamed,autoselect
 set mouse=a
 set guioptions+=a
 set ttymouse=xterm2
-
-" airlineも表示したいので
-" ステータスラインは下から2行までとする
-set laststatus=2
 
 " 行末の余分なスペースを保存時に削除
 autocmd BufWritePre * :%s/\s\+$//ge
@@ -197,6 +194,9 @@ inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "<CR>"
 " airline
 """"""""""""""""""""
 
+" ステータスラインは下から2行まで
+set laststatus=2
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#tab_nr_type = 1
@@ -207,8 +207,15 @@ set t_Co=256
 let g:airline_theme='badwolf'
 let g:airline_left_sep = '⮀'
 let g:airline_right_sep = '⮂'
-"let g:airline_linecolumn_prefix = '⭡'
-"let g:airline_branch_prefix = '⭠'
+let g:airline_linecolumn_prefix = '⭡'
+let g:airline_branch_prefix = '⭠ '
 let g:airline#extensions#tabline#left_sep = '⮀'
 let g:airline#extensions#tabline#left_alt_sep = '⮀'
+let g:airline#extensions#readonly#enabled = 0
+let g:airline#extensions#branch#enabled = 0
+let g:airline_section_b =
+      \ '%{airline#extensions#branch#get_head()}' .
+      \ '%{""!=airline#extensions#branch#get_head()?("  " . g:airline_left_alt_sep . " "):""}' .
+      \ '%t%( %M%)'
+let g:airline_section_c = ''
 """"""""""""""""""""
