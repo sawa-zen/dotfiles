@@ -1,13 +1,8 @@
 # 環境構築
 
-## nvmのインストール
+## eslintのインストール
 ```terminal
-git clone git://github.com/creationix/nvm.git ~/.nvm
-```
-
-## JShintのインストール
-```terminal
-npm install -g jshint
+npm install -g eslint
 ```
 
 ## NeoBundleのインストール
