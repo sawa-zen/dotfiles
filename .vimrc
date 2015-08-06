@@ -27,6 +27,7 @@ NeoBundle 'bling/vim-airline' " ステータスバー
 NeoBundle 'tpope/vim-fugitive' " branch表示
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'chase/vim-ansible-yaml'
+NeoBundle 'digitaltoad/vim-jade' " jadeのハイライト
 call neobundle#end()
 
 " ファイルタイプの自動検出、ファイルタイプ用の
