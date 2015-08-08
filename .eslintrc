@@ -14,6 +14,7 @@
     "key-spacing" : [2, {
       "afterColon" : true // コロンの後は必ずスペース一つ空ける
     }],
-    "quotes": [2, "single"]
+    "quotes": [2, "single"],
+    "no-console": 0
   }
 }
