@@ -47,6 +47,9 @@ alias ddms='/Users/sawada/Library/android-sdk-macosx/tools/ddms'
 # 一個のペインで使えるリミットの制限をあげる
 ulimit -n 10000
 
-# PATHを通すおまじない
+# rbenvのPATHを通すおまじない
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# FLASH開発のためのFLEXのパスを通す
+PATH=$PATH:~/develop/SDKs/flex_4/bin
