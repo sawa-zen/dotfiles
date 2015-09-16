@@ -12,11 +12,6 @@ source $ZSH/oh-my-zsh.sh
 
 ##### ここから個人設定 ######
 
-# nvmの読み込み
-source ~/.nvm/nvm.sh
-npm_dir=${NVM_PATH}_modules
-export NODE_PATH=$npm_dir
-
 # grepに色をつける
 export GREP_COLOR='1;37;41'
 alias grep='grep -E --color=auto'
@@ -50,6 +45,9 @@ ulimit -n 10000
 # rbenvのPATHを通すおまじない
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# nodebrewのパスを通す
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # FLASH開発のためのFLEXのパスを通す
 PATH=$PATH:~/develop/SDKs/flex_4/bin
