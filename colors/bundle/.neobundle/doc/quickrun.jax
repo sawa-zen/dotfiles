@@ -444,11 +444,13 @@ NOTE: "system" 以外は不安定な場合があります。
 	'updatetime' による待機をする必要がなくなります。
   runner/vimproc/updatetime		デフォルト: 0
 	一時的に 'updatetime' をこの値に変更します。0 の場合は変更しません。
+  runner/vimproc/read_timeout		デフォルト: 100
+	1 度の読み込みにかける時間(ミリ秒)です。
 
 - "runner/process_manager"	*quickrun-module-runner/process_manager*
-  (非推奨) |quickrun-module-runner/concurrent_process| と同様、プロセスをばっ
-  バックグラウンドで実行し、かつそれを再利用します。concurrent_processとの違い
-  は使用する下位ライブラリです。
+  (非推奨) |quickrun-module-runner/concurrent_process| と同様、プロセスをバッ
+  クグラウンドで実行し、かつそれを再利用します。concurrent_processとの違いは使
+  用する下位ライブラリです。
 
   オプション ~
   runner/process_manager/load			デフォルト: "load %s"
@@ -566,8 +568,28 @@ outputter は結果の出力を行うモジュールです。
 - "outputter/quickfix"			*quickrun-module-outputter/quickfix*
   |quickfix| へ出力します。
   オプション ~
-  outputter/quickfix/errorformat		デフォルト: "&errorformat"
+  outputter/quickfix/errorformat	デフォルト: "&errorformat"
 	出力を解釈するための 'errorformat' オプションの値です。
+  outputter/quickfix/open_cmd		デフォルト: "copen"
+	|quickfix-window| を開くためのコマンドです。
+	結果が空だった場合は自動で閉じられます。
+	"cwindow" は使わないでください。いくつかの機能がうまく動作しません。
+  outputter/quickfix/into		デフォルト: 0
+	0 以外を指定すると、結果が出た際に |quickfix-window| へカーソルを移動
+	します。
+
+- "outputter/loclist"			*quickrun-module-outputter/loclist*
+  |location-list| へ出力します。
+  オプション ~
+  outputter/loclist/errorformat	デフォルト: "&errorformat"
+	出力を解釈するための 'errorformat' オプションの値です。
+  outputter/loclist/open_cmd		デフォルト: "copen"
+	|location-list-window| を開くためのコマンドです。
+	結果が空だった場合は自動で閉じられます。
+	"cwindow" は使わないでください。いくつかの機能がうまく動作しません。
+  outputter/loclist/into		デフォルト: 0
+	0 以外を指定すると、結果が出た際に |location-list-window| へカーソルを
+	移動します。
 
 - "outputter/browser"			*quickrun-module-outputter/browser*
   {|open-browser| が必要}
@@ -731,6 +753,11 @@ session.sweep()				*quickrun-session.sweep()*
 	また、"_vimproc" という属性があった場合、その |vimproc| を強制終了しま
 	す。これは便利ですが、今のところ複数のモジュールから使われた際の名前の
 	衝突が考慮されていません。これは将来改善される可能性があります。
+
+session.config				*quickrun-session.config*
+	|quickrun-options| の辞書です。|quickrun-hook-point-normalized| のタイ
+	ミングから、標準化された config が利用できます。全てのオプションの値が
+	入っているとは限りません。
 
 ------------------------------------------------------------------------------
 共通の属性				*quickrun-module-attributes*

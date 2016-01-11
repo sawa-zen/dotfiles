@@ -198,6 +198,10 @@ inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "<CR>"
 " ステータスラインは下から2行まで
 set laststatus=2
 
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#tab_nr_type = 1
@@ -208,10 +212,10 @@ set t_Co=256
 let g:airline_theme='badwolf'
 let g:airline_left_sep = '⮀'
 let g:airline_right_sep = '⮂'
-let g:airline_linecolumn_prefix = '⭡'
-let g:airline_branch_prefix = '⭠ '
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.branch = '⎇'
 let g:airline#extensions#tabline#left_sep = '⮀'
-let g:airline#extensions#tabline#left_alt_sep = '⮀'
+let g:airline#extensions#tabline#left_alt_sep = '⮂'
 let g:airline#extensions#readonly#enabled = 0
 let g:airline#extensions#branch#enabled = 0
 let g:airline_section_b =
