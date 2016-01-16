@@ -9,7 +9,7 @@ set runtimepath+=~/.vim/bundle/neobundle.vim/
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/vimshell'
@@ -27,7 +27,19 @@ NeoBundle 'bling/vim-airline' " ステータスバー
 NeoBundle 'tpope/vim-fugitive' " branch表示
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'chase/vim-ansible-yaml'
+NeoBundle 'mattn/emmet-vim' " emmet
 NeoBundle 'digitaltoad/vim-jade' " jadeのハイライト
+NeoBundle 'Shougo/vimproc.vim', {
+      \ 'build' : {
+      \     'windows' : 'tools\\update-dll-mingw',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make',
+      \     'linux' : 'make',
+      \     'unix' : 'gmake',
+      \    },
+      \ }
+NeoBundle 'Quramy/tsuquyomi'
+NeoBundle 'leafgarland/typescript-vim'
 call neobundle#end()
 
 " ファイルタイプの自動検出、ファイルタイプ用の
@@ -101,6 +113,11 @@ set mouse=a
 set guioptions+=a
 set ttymouse=xterm2
 
+let g:typescript_compiler_options = '-sourcemap'
+
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+
 " 行末の余分なスペースを保存時に削除
 autocmd BufWritePre * :%s/\s\+$//ge
 
@@ -110,7 +127,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_mode_map = {
   \ 'mode': 'active',
   \ 'active_filetypes': ['javascript'],
-  \ 'passive_filetypes': ['html']
+  \ 'passive_filetypes': ['html', 'typescript']
   \}
 let g:syntastic_auto_loc_list = 1
 
@@ -149,45 +166,29 @@ let g:NERDTreeWinSize=20
 """"""""""""""""""""
 
 
+""""""""""""""""""""
+" neosnippet
+""""""""""""""""""""
+" Plugin key-mappings.  " <C-k>でsnippetの展開
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+
 
 """"""""""""""""""""
-" neocomplcache
+" neocomplete
 """"""""""""""""""""
+set nocompatible
+set completeopt+=menuone
+set rtp+=~/work/neocomplete.vim/
+set rtp+=~/work/vimproc.vim/
+set rtp+=~/.cache/neobundle/tsuquyomi/
 
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-" Use neocomplcache.
-let g:neocomplcache_enable_at_startup = 1
-" Use smartcase.
-let g:neocomplcache_enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-" Define dictionary.
-let g:neocomplcache_dictionary_filetype_lists = {
-    \ 'default' : ''
-    \ }
-
-" Plugin key-mappings.
-inoremap <expr><C-g>     neocomplcache#undo_completion()
-inoremap <expr><C-l>     neocomplcache#complete_common_string()
-
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-  return neocomplcache#smart_close_popup() . "\<CR>"
-endfunction
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplcache#close_popup()
-inoremap <expr><C-e>  neocomplcache#cancel_popup()
-inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "<CR>"
-
-""""""""""""""""""""
+filetype plugin indent on
+let g:neocomplete#enable_at_startup = 1
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.typescript = '[^. *\t]\.\w*\|\h\w*::'
 
 
 
@@ -213,7 +214,7 @@ let g:airline_theme='badwolf'
 let g:airline_left_sep = '⮀'
 let g:airline_right_sep = '⮂'
 let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.branch = '⭠'
 let g:airline#extensions#tabline#left_sep = '⮀'
 let g:airline#extensions#tabline#left_alt_sep = '⮂'
 let g:airline#extensions#readonly#enabled = 0

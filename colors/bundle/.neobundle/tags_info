@@ -1,13 +1,16 @@
 colorizer
+emmet-vim
 grep.vim
 localrc.vim
 neobundle.vim
-neocomplcache
+neocomplete.vim
 neosnippet
 neosnippet-snippets
 nerdtree
 syntastic
 titanium-vim
+tsuquyomi
+typescript-vim
 vim-airline
 vim-ansible-yaml
 vim-fugitive
@@ -16,4 +19,5 @@ vim-jade
 vim-javascript
 vim-jsx
 vim-quickrun
+vimproc.vim
 vimshell
