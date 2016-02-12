@@ -454,6 +454,8 @@ default.  NOTE: Everything except for "system" can be unstable.
 	by 'updatetime' when program will stop immediately.
   runner/vimproc/updatetime		Default: 0
 	Changes 'updatetime' to the value temporary.  Stays same if this is 0.
+  runner/vimproc/read_timeout		Default: 100
+	The time to read at one time. (milliseconds)
 
 - "runner/process_manager"	*quickrun-module-runner/process_manager*
   (DEPRECATED) Same as |quickrun-module-runner/concurrent_process| it runs
@@ -576,8 +578,26 @@ available by default.
 - "outputter/quickfix"			*quickrun-module-outputter/quickfix*
   Outputs on |quickfix|.
   Option ~
-  outputter/quickfix/errorformat		Default: "&errorformat"
+  outputter/quickfix/errorformat	Default: "&errorformat"
 	'errorformat' option to parse the output.
+  outputter/quickfix/open_cmd		Default: "copen"
+	The command to open |quickfix-window|.
+	The window is closed automatically when the result is empty.
+	You shouldn't use "cwindow".  Some features don't work well.
+  outputter/quickfix/into		Default: 0
+	Moves cursor to the |quickfix-window| if this isn't 0.
+
+- "outputter/loclist"			*quickrun-module-outputter/loclist*
+  Outputs on |location-list|.
+  Option ~
+  outputter/loclist/errorformat	Default: "&errorformat"
+	'errorformat' option to parse the output.
+  outputter/loclist/open_cmd		Default: "copen"
+	The command to open |location-list-window|.
+	The window is closed automatically when the result is empty.
+	You shouldn't use "cwindow".  Some features don't work well.
+  outputter/loclist/into		Default: 0
+	Moves cursor to the |location-list-window| if this isn't 0.
 
 - "outputter/browser"			*quickrun-module-outputter/browser*
   {Requires |open-browser|}
@@ -733,6 +753,11 @@ session.sweep()				*quickrun-session.sweep()*
 	Further, if it has an attribute "_vimproc", forcefully terminates the
 	|vimproc|.  This is handy, however, they don't care naming collisions
 	by multiple modules.  The author is going to solve them in the future.
+
+session.config				*quickrun-session.config*
+	|quickrun-options| as an dictionary.  You available the normalized
+	config from |quickrun-hook-point-normalized|.  Note that all options
+	may be not available.
 
 ------------------------------------------------------------------------------
 MODULE COMMON ATTRIBUTES		*quickrun-module-attributes*
