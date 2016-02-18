@@ -41,6 +41,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundle 'Quramy/tsuquyomi'
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'mattn/emmet-vim' " emmet
+NeoBundle 'tikhomirov/vim-glsl' " GLSL
 call neobundle#end()
 
 " ファイルタイプの自動検出、ファイルタイプ用の
