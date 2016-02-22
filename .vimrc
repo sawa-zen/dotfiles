@@ -38,8 +38,8 @@ NeoBundle 'Shougo/vimproc.vim', {
       \     'unix' : 'gmake',
       \    },
       \ }
-NeoBundle 'Quramy/tsuquyomi'
-NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'Quramy/tsuquyomi' " typescriptのサーバー
+NeoBundle 'leafgarland/typescript-vim' " typescriptのsyntax
 NeoBundle 'mattn/emmet-vim' " emmet
 NeoBundle 'tikhomirov/vim-glsl' " GLSL
 call neobundle#end()
