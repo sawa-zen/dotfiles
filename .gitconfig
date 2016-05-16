@@ -9,7 +9,7 @@
 	difff = diff --word-diff
 [core]
 	editor = vim -c \"set fenc=utf-8\"
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/sawada/.gitignore
 [diff]
 	external = git_diff_wrapper
 [pager]
@@ -21,3 +21,9 @@
 	ui = auto
 [credential]
 	helper = osxkeychain
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
