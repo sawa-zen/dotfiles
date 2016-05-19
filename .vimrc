@@ -42,6 +42,7 @@ NeoBundle 'Quramy/tsuquyomi' " typescriptのサーバー
 NeoBundle 'leafgarland/typescript-vim' " typescriptのsyntax
 NeoBundle 'mattn/emmet-vim' " emmet
 NeoBundle 'tikhomirov/vim-glsl' " GLSL
+NeoBundle 'tomtom/tcomment_vim' " コメントアウト
 call neobundle#end()
 
 " ファイルタイプの自動検出、ファイルタイプ用の
@@ -152,6 +153,16 @@ au BufNewFile,BufRead *.md :set filetype=markdown
 
 """"""""""""""""""""
 
+
+""""""""""""""""""""
+" tcomment
+" コメントアウトプラグイン
+""""""""""""""""""""
+if !exists('g:tcomment_types')
+	let g:tcomment_types = {}
+endif
+let g:tcomment_types['typescript'] = '// %s'
+""""""""""""""""""""
 
 
 """"""""""""""""""""
