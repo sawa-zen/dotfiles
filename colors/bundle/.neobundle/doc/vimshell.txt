@@ -401,8 +401,8 @@ g:vimshell_interactive_no_save_history_commands
 g:vimshell_interactive_update_time
 		When |vimshell-internal-iexe| is in Insert mode, this value
 		controls the timing of auto update.
-		|vimshell-internal-iexe| changes 'updatetime' based on this
-		value.
+		Note: |vimshell-internal-iexe| changes 'updatetime' based on
+		this value if Vim does not support |+timers|.
 		If it is 0, this feature is disabled.
 
 		Default value is 200.
@@ -563,6 +563,9 @@ Normal mode key mappings.
 <Plug>(vimshell_interrupt)			*<Plug>(vimshell_interrupt)*
 		Send interrupt.
 
+<Plug>(vimshell_send_eof)			*<Plug>(vimshell_send_eof)*
+		Send EOF.
+
 <Plug>(vimshell_insert_head)			*<Plug>(vimshell_insert_head)*
 					*<Plug>(vimshell_insert_enter)*
 <Plug>(vimshell_insert_enter)
@@ -650,10 +653,11 @@ Insert mode key mappings.
 		Execute vimshell history by unite interface.
 		Note: To use it, you must install |unite.vim| plugin.
 
-				*i_<Plug>(vimshell_history_neocomplete)*
-<Plug>(vimshell_history_neocomplete)
-		Execute vimshell history by neocomplete interface.
-		Note: To use it, you must install |neocomplete| plugin.
+				*i_<Plug>(vimshell_history_complete)*
+<Plug>(vimshell_history_complete)
+		Execute vimshell history by the completion interface.
+		Note: To use it, you must install |neocomplete| or |deoplete|
+		plugin.
 
 					*vimshell_default_key_mappings*
 Normal mode default key mappings.
@@ -689,8 +693,8 @@ Insert mode default key mappings.
 --------		-----------------------------
 <CR>			<Plug>(vimshell_enter)
 <C-l>			<Plug>(vimshell_history_unite)
-<C-p>/<Up>		<Plug>(vimshell_history_neocomplete)
-<C-n>/<Down>		<Plug>(vimshell_history_neocomplete)
+<C-p>/<Up>		<Plug>(vimshell_history_complete)
+<C-n>/<Down>		<Plug>(vimshell_history_complete)
 <TAB>			<Plug>(vimshell_command_complete)
 <C-a>			<Plug>(vimshell_move_head)
 <C-u>			<Plug>(vimshell_delete_backward_line)
@@ -699,6 +703,7 @@ Insert mode default key mappings.
 	(other)		<Plug>(vimshell_push_current_line)
 <C-t>			<Plug>(vimshell_insert_last_word)
 <C-c>			<Plug>(vimshell_interrupt)
+<C-d>			<Plug>(vimshell_send_eof)
 <C-h>			<Plug>(vimshell_delete_backward_char)
 <BS>			<Plug>(vimshell_delete_backward_char)
 <C-k>			<Plug>(vimshell_delete_forward_line)
@@ -1588,10 +1593,9 @@ dynamically instead of it.
 
 Q: I want to execute history by completion interface.
 
-A: You can use |<Plug>(vimshell_history_neocomplete)| mapping.
-Note: |neocomplete| is required.
+A: You can use |<Plug>(vimshell_history_complete)| mapping.
 >
-	imap <buffer><C-g> <Plug>(vimshell_history_neocomplete)
+	imap <buffer><C-g> <Plug>(vimshell_history_complete)
 <
 Q: vimshell does not use escape sequence color.
 

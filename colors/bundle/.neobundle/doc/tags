@@ -6,6 +6,7 @@
 'NERDTreeCascadeOpenSingleChildDir'	NERD_tree.txt	/*'NERDTreeCascadeOpenSingleChildDir'*
 'NERDTreeCaseSensitiveSort'	NERD_tree.txt	/*'NERDTreeCaseSensitiveSort'*
 'NERDTreeChDirMode'	NERD_tree.txt	/*'NERDTreeChDirMode'*
+'NERDTreeCreatePrefix'	NERD_tree.txt	/*'NERDTreeCreatePrefix'*
 'NERDTreeHighlightCursorline'	NERD_tree.txt	/*'NERDTreeHighlightCursorline'*
 'NERDTreeHijackNetrw'	NERD_tree.txt	/*'NERDTreeHijackNetrw'*
 'NERDTreeIgnore'	NERD_tree.txt	/*'NERDTreeIgnore'*
@@ -30,6 +31,7 @@
 'syntastic_<filetype>_<checker>_<option>'	syntastic.txt	/*'syntastic_<filetype>_<checker>_<option>'*
 'syntastic_<filetype>_<checker>_exe'	syntastic.txt	/*'syntastic_<filetype>_<checker>_exe'*
 'syntastic_<filetype>_<checker>_exec'	syntastic.txt	/*'syntastic_<filetype>_<checker>_exec'*
+'syntastic_<filetype>_<checker>_fname'	syntastic.txt	/*'syntastic_<filetype>_<checker>_fname'*
 'syntastic_<filetype>_<checker>_quiet_messages'	syntastic.txt	/*'syntastic_<filetype>_<checker>_quiet_messages'*
 'syntastic_<filetype>_<checker>_sort'	syntastic.txt	/*'syntastic_<filetype>_<checker>_sort'*
 'syntastic_aggregate_errors'	syntastic.txt	/*'syntastic_aggregate_errors'*
@@ -62,6 +64,7 @@
 'syntastic_style_error_symbol'	syntastic.txt	/*'syntastic_style_error_symbol'*
 'syntastic_style_warning_symbol'	syntastic.txt	/*'syntastic_style_warning_symbol'*
 'syntastic_warning_symbol'	syntastic.txt	/*'syntastic_warning_symbol'*
+/syntastic/	syntastic.txt	/*\/syntastic\/*
 :AirlineRefresh	airline.txt	/*:AirlineRefresh*
 :AirlineTheme	airline.txt	/*:AirlineTheme*
 :AirlineToggle	airline.txt	/*:AirlineToggle*
@@ -79,12 +82,12 @@
 :GitGutterNextHunk	gitgutter.txt	/*:GitGutterNextHunk*
 :GitGutterPrevHunk	gitgutter.txt	/*:GitGutterPrevHunk*
 :GitGutterPreviewHunk	gitgutter.txt	/*:GitGutterPreviewHunk*
-:GitGutterRevertHunk	gitgutter.txt	/*:GitGutterRevertHunk*
 :GitGutterSignsDisable	gitgutter.txt	/*:GitGutterSignsDisable*
 :GitGutterSignsEnable	gitgutter.txt	/*:GitGutterSignsEnable*
 :GitGutterSignsToggle	gitgutter.txt	/*:GitGutterSignsToggle*
 :GitGutterStageHunk	gitgutter.txt	/*:GitGutterStageHunk*
 :GitGutterToggle	gitgutter.txt	/*:GitGutterToggle*
+:GitGutterUndoHunk	gitgutter.txt	/*:GitGutterUndoHunk*
 :NERDTree	NERD_tree.txt	/*:NERDTree*
 :NERDTreeCWD	NERD_tree.txt	/*:NERDTreeCWD*
 :NERDTreeClose	NERD_tree.txt	/*:NERDTreeClose*
@@ -95,7 +98,6 @@
 :NeoBundle	neobundle.txt	/*:NeoBundle*
 :NeoBundleCheck	neobundle.txt	/*:NeoBundleCheck*
 :NeoBundleCheckUpdate	neobundle.txt	/*:NeoBundleCheckUpdate*
-:NeoBundleClean	neobundle.txt	/*:NeoBundleClean*
 :NeoBundleClearCache	neobundle.txt	/*:NeoBundleClearCache*
 :NeoBundleCount	neobundle.txt	/*:NeoBundleCount*
 :NeoBundleDirectInstall	neobundle.txt	/*:NeoBundleDirectInstall*
@@ -111,7 +113,6 @@
 :NeoBundleLoadCache	neobundle.txt	/*:NeoBundleLoadCache*
 :NeoBundleLocal	neobundle.txt	/*:NeoBundleLocal*
 :NeoBundleLog	neobundle.txt	/*:NeoBundleLog*
-:NeoBundleRecipe	neobundle.txt	/*:NeoBundleRecipe*
 :NeoBundleReinstall	neobundle.txt	/*:NeoBundleReinstall*
 :NeoBundleRemotePlugins	neobundle.txt	/*:NeoBundleRemotePlugins*
 :NeoBundleRollback	neobundle.txt	/*:NeoBundleRollback*
@@ -127,6 +128,7 @@
 :NeoCompleteDisable	neocomplete.txt	/*:NeoCompleteDisable*
 :NeoCompleteEnable	neocomplete.txt	/*:NeoCompleteEnable*
 :NeoCompleteLock	neocomplete.txt	/*:NeoCompleteLock*
+:NeoCompleteMemberMakeCache	neocomplete.txt	/*:NeoCompleteMemberMakeCache*
 :NeoCompleteSetFileType	neocomplete.txt	/*:NeoCompleteSetFileType*
 :NeoCompleteTagMakeCache	neocomplete.txt	/*:NeoCompleteTagMakeCache*
 :NeoCompleteToggle	neocomplete.txt	/*:NeoCompleteToggle*
@@ -159,6 +161,7 @@
 :TsuReloadProject	tsuquyomi.txt	/*:TsuReloadProject*
 :TsuRenameSymbol	tsuquyomi.txt	/*:TsuRenameSymbol*
 :TsuRenameSymbolC	tsuquyomi.txt	/*:TsuRenameSymbolC*
+:TsuSearch	tsuquyomi.txt	/*:TsuSearch*
 :TsuStartServer	tsuquyomi.txt	/*:TsuStartServer*
 :TsuStatusServer	tsuquyomi.txt	/*:TsuStatusServer*
 :TsuStopServer	tsuquyomi.txt	/*:TsuStopServer*
@@ -174,6 +177,7 @@
 :TsuquyomiReloadProject	tsuquyomi.txt	/*:TsuquyomiReloadProject*
 :TsuquyomiRenameSymbol	tsuquyomi.txt	/*:TsuquyomiRenameSymbol*
 :TsuquyomiRenameSymbolC	tsuquyomi.txt	/*:TsuquyomiRenameSymbolC*
+:TsuquyomiSeaarch	tsuquyomi.txt	/*:TsuquyomiSeaarch*
 :TsuquyomiStartServer	tsuquyomi.txt	/*:TsuquyomiStartServer*
 :TsuquyomiStatusServer	tsuquyomi.txt	/*:TsuquyomiStatusServer*
 :TsuquyomiStopServer	tsuquyomi.txt	/*:TsuquyomiStopServer*
@@ -208,6 +212,7 @@
 <C-y>u	emmet.txt	/*<C-y>u*
 <Plug>(TsuquyomiDefinition)	tsuquyomi.txt	/*<Plug>(TsuquyomiDefinition)*
 <Plug>(TsuquyomiGoBack)	tsuquyomi.txt	/*<Plug>(TsuquyomiGoBack)*
+<Plug>(TsuquyomiImport)	tsuquyomi.txt	/*<Plug>(TsuquyomiImport)*
 <Plug>(TsuquyomiReferences)	tsuquyomi.txt	/*<Plug>(TsuquyomiReferences)*
 <Plug>(TsuquyomiRenameSymbol)	tsuquyomi.txt	/*<Plug>(TsuquyomiRenameSymbol)*
 <Plug>(TsuquyomiRenameSymbolC)	tsuquyomi.txt	/*<Plug>(TsuquyomiRenameSymbolC)*
@@ -253,6 +258,7 @@
 <Plug>(vimshell_next_prompt)	vimshell.txt	/*<Plug>(vimshell_next_prompt)*
 <Plug>(vimshell_paste_prompt)	vimshell.txt	/*<Plug>(vimshell_paste_prompt)*
 <Plug>(vimshell_previous_prompt)	vimshell.txt	/*<Plug>(vimshell_previous_prompt)*
+<Plug>(vimshell_send_eof)	vimshell.txt	/*<Plug>(vimshell_send_eof)*
 <Plug>(vimshell_split_create)	vimshell.txt	/*<Plug>(vimshell_split_create)*
 <Plug>(vimshell_split_switch)	vimshell.txt	/*<Plug>(vimshell_split_switch)*
 <Plug>(vimshell_switch)	vimshell.txt	/*<Plug>(vimshell_switch)*
@@ -278,6 +284,7 @@
 <Plug>TComment_ic	tcomment.txt	/*<Plug>TComment_ic*
 Emmet	emmet.txt	/*Emmet*
 GitGutter	gitgutter.txt	/*GitGutter*
+GitGutterAutocmd	gitgutter.txt	/*GitGutterAutocmd*
 GitGutterCommands	gitgutter.txt	/*GitGutterCommands*
 GitGutterContents	gitgutter.txt	/*GitGutterContents*
 GitGutterCustomisation	gitgutter.txt	/*GitGutterCustomisation*
@@ -371,9 +378,11 @@ airline-intro	airline.txt	/*airline-intro*
 airline-license	airline.txt	/*airline-license*
 airline-name	airline.txt	/*airline-name*
 airline-nrrwrgn	airline.txt	/*airline-nrrwrgn*
+airline-obsession	airline.txt	/*airline-obsession*
 airline-parts	airline.txt	/*airline-parts*
 airline-pipeline	airline.txt	/*airline-pipeline*
 airline-pipeline-return-codes	airline.txt	/*airline-pipeline-return-codes*
+airline-po	airline.txt	/*airline-po*
 airline-predefined-parts	airline.txt	/*airline-predefined-parts*
 airline-promptline	airline.txt	/*airline-promptline*
 airline-quickfix	airline.txt	/*airline-quickfix*
@@ -390,6 +399,7 @@ airline-whitespace	airline.txt	/*airline-whitespace*
 airline-windowswap	airline.txt	/*airline-windowswap*
 airline-wordcount	airline.txt	/*airline-wordcount*
 airline-writing-extensions	airline.txt	/*airline-writing-extensions*
+airline-ycm	airline.txt	/*airline-ycm*
 airline.txt	airline.txt	/*airline.txt*
 ansible	ansible.txt	/*ansible*
 ansible-configuration	ansible.txt	/*ansible-configuration*
@@ -567,6 +577,7 @@ g:neocomplete#enable_cursor_hold_i	neocomplete.txt	/*g:neocomplete#enable_cursor
 g:neocomplete#enable_fuzzy_completion	neocomplete.txt	/*g:neocomplete#enable_fuzzy_completion*
 g:neocomplete#enable_ignore_case	neocomplete.txt	/*g:neocomplete#enable_ignore_case*
 g:neocomplete#enable_multibyte_completion	neocomplete.txt	/*g:neocomplete#enable_multibyte_completion*
+g:neocomplete#enable_refresh_always	neocomplete.txt	/*g:neocomplete#enable_refresh_always*
 g:neocomplete#enable_smart_case	neocomplete.txt	/*g:neocomplete#enable_smart_case*
 g:neocomplete#fallback_mappings	neocomplete.txt	/*g:neocomplete#fallback_mappings*
 g:neocomplete#force_omni_input_patterns	neocomplete.txt	/*g:neocomplete#force_omni_input_patterns*
@@ -659,6 +670,7 @@ g:titanium_mobile_complete_keywords_path	ft-titinium.txt	/*g:titanium_mobile_com
 g:titanium_sdk_root_dir	ft-titinium.txt	/*g:titanium_sdk_root_dir*
 g:tsuquyomi_auto_open	tsuquyomi.txt	/*g:tsuquyomi_auto_open*
 g:tsuquyomi_completion_case_sensitive	tsuquyomi.txt	/*g:tsuquyomi_completion_case_sensitive*
+g:tsuquyomi_completion_detail	tsuquyomi.txt	/*g:tsuquyomi_completion_detail*
 g:tsuquyomi_definition_split	tsuquyomi.txt	/*g:tsuquyomi_definition_split*
 g:tsuquyomi_disable_default_mappings	tsuquyomi.txt	/*g:tsuquyomi_disable_default_mappings*
 g:tsuquyomi_disable_quickfix	tsuquyomi.txt	/*g:tsuquyomi_disable_quickfix*
@@ -676,6 +688,7 @@ g:user_emmet_mode	emmet.txt	/*g:user_emmet_mode*
 g:user_emmet_settings	emmet.txt	/*g:user_emmet_settings*
 g:vimproc#disable	vimproc.txt	/*g:vimproc#disable*
 g:vimproc#dll_path	vimproc.txt	/*g:vimproc#dll_path*
+g:vimproc#download_windows_dll	vimproc.txt	/*g:vimproc#download_windows_dll*
 g:vimproc#password_pattern	vimproc.txt	/*g:vimproc#password_pattern*
 g:vimproc#popen2_commands	vimproc.txt	/*g:vimproc#popen2_commands*
 g:vimproc_dll_path	vimproc.txt	/*g:vimproc_dll_path*
@@ -734,7 +747,7 @@ i_<Plug>(vimshell_enter)	vimshell.txt	/*i_<Plug>(vimshell_enter)*
 i_<Plug>(vimshell_execute_by_background)	vimshell.txt	/*i_<Plug>(vimshell_execute_by_background)*
 i_<Plug>(vimshell_exit)	vimshell.txt	/*i_<Plug>(vimshell_exit)*
 i_<Plug>(vimshell_hide)	vimshell.txt	/*i_<Plug>(vimshell_hide)*
-i_<Plug>(vimshell_history_neocomplete)	vimshell.txt	/*i_<Plug>(vimshell_history_neocomplete)*
+i_<Plug>(vimshell_history_complete)	vimshell.txt	/*i_<Plug>(vimshell_history_complete)*
 i_<Plug>(vimshell_history_unite)	vimshell.txt	/*i_<Plug>(vimshell_history_unite)*
 i_<Plug>(vimshell_insert_last_word)	vimshell.txt	/*i_<Plug>(vimshell_insert_last_word)*
 i_<Plug>(vimshell_int_another_delete_backward_char)	vimshell.txt	/*i_<Plug>(vimshell_int_another_delete_backward_char)*
@@ -778,6 +791,7 @@ localrc-usage	localrc.txt	/*localrc-usage*
 localrc.txt	localrc.txt	/*localrc.txt*
 neobundle	neobundle.txt	/*neobundle*
 neobundle#add()	neobundle.txt	/*neobundle#add()*
+neobundle#add_meta()	neobundle.txt	/*neobundle#add_meta()*
 neobundle#append()	neobundle.txt	/*neobundle#append()*
 neobundle#begin()	neobundle.txt	/*neobundle#begin()*
 neobundle#bundle()	neobundle.txt	/*neobundle#bundle()*
@@ -838,6 +852,7 @@ neobundle-options-install_process_timeout	neobundle.txt	/*neobundle-options-inst
 neobundle-options-lazy	neobundle.txt	/*neobundle-options-lazy*
 neobundle-options-mappings	neobundle.txt	/*neobundle-options-mappings*
 neobundle-options-name	neobundle.txt	/*neobundle-options-name*
+neobundle-options-normalized_name	neobundle.txt	/*neobundle-options-normalized_name*
 neobundle-options-on_cmd	neobundle.txt	/*neobundle-options-on_cmd*
 neobundle-options-on_ft	neobundle.txt	/*neobundle-options-on_ft*
 neobundle-options-on_func	neobundle.txt	/*neobundle-options-on_func*
@@ -845,10 +860,7 @@ neobundle-options-on_i	neobundle.txt	/*neobundle-options-on_i*
 neobundle-options-on_map	neobundle.txt	/*neobundle-options-on_map*
 neobundle-options-on_path	neobundle.txt	/*neobundle-options-on_path*
 neobundle-options-on_source	neobundle.txt	/*neobundle-options-on_source*
-neobundle-options-on_unite	neobundle.txt	/*neobundle-options-on_unite*
 neobundle-options-pre_cmd	neobundle.txt	/*neobundle-options-pre_cmd*
-neobundle-options-recipe	neobundle.txt	/*neobundle-options-recipe*
-neobundle-options-regular_name	neobundle.txt	/*neobundle-options-regular_name*
 neobundle-options-rtp	neobundle.txt	/*neobundle-options-rtp*
 neobundle-options-script_type	neobundle.txt	/*neobundle-options-script_type*
 neobundle-options-site	neobundle.txt	/*neobundle-options-site*
@@ -857,10 +869,8 @@ neobundle-options-type	neobundle.txt	/*neobundle-options-type*
 neobundle-options-type__depth	neobundle.txt	/*neobundle-options-type__depth*
 neobundle-options-type__filename	neobundle.txt	/*neobundle-options-type__filename*
 neobundle-options-type__protocol	neobundle.txt	/*neobundle-options-type__protocol*
-neobundle-options-unite_sources	neobundle.txt	/*neobundle-options-unite_sources*
 neobundle-options-verbose	neobundle.txt	/*neobundle-options-verbose*
 neobundle-options-vim_version	neobundle.txt	/*neobundle-options-vim_version*
-neobundle-recipe	neobundle.txt	/*neobundle-recipe*
 neobundle-unite-source-neobundle	neobundle.txt	/*neobundle-unite-source-neobundle*
 neobundle-unite-source-neobundle-install	neobundle.txt	/*neobundle-unite-source-neobundle-install*
 neobundle-unite-source-neobundle-lazy	neobundle.txt	/*neobundle-unite-source-neobundle-lazy*
@@ -918,6 +928,7 @@ neocomplete-filter-matcher_default	neocomplete.txt	/*neocomplete-filter-matcher_
 neocomplete-filter-matcher_fuzzy	neocomplete.txt	/*neocomplete-filter-matcher_fuzzy*
 neocomplete-filter-matcher_head	neocomplete.txt	/*neocomplete-filter-matcher_head*
 neocomplete-filter-matcher_length	neocomplete.txt	/*neocomplete-filter-matcher_length*
+neocomplete-filter-matcher_nothing	neocomplete.txt	/*neocomplete-filter-matcher_nothing*
 neocomplete-filter-sorter_default	neocomplete.txt	/*neocomplete-filter-sorter_default*
 neocomplete-filter-sorter_length	neocomplete.txt	/*neocomplete-filter-sorter_length*
 neocomplete-filter-sorter_rank	neocomplete.txt	/*neocomplete-filter-sorter_rank*
@@ -942,6 +953,7 @@ neocomplete-source-attribute-hooks	neocomplete.txt	/*neocomplete-source-attribut
 neocomplete-source-attribute-hooks-on_final	neocomplete.txt	/*neocomplete-source-attribute-hooks-on_final*
 neocomplete-source-attribute-hooks-on_init	neocomplete.txt	/*neocomplete-source-attribute-hooks-on_init*
 neocomplete-source-attribute-hooks-on_post_filter	neocomplete.txt	/*neocomplete-source-attribute-hooks-on_post_filter*
+neocomplete-source-attribute-input_pattern	neocomplete.txt	/*neocomplete-source-attribute-input_pattern*
 neocomplete-source-attribute-is_volatile	neocomplete.txt	/*neocomplete-source-attribute-is_volatile*
 neocomplete-source-attribute-keyword_patterns	neocomplete.txt	/*neocomplete-source-attribute-keyword_patterns*
 neocomplete-source-attribute-kind	neocomplete.txt	/*neocomplete-source-attribute-kind*
@@ -1000,6 +1012,7 @@ neosnippet-variables	neosnippet.txt	/*neosnippet-variables*
 neosnippet.txt	neosnippet.txt	/*neosnippet.txt*
 quickrun	quickrun.txt	/*quickrun*
 quickrun#config()	quickrun.txt	/*quickrun#config()*
+quickrun#is_running()	quickrun.txt	/*quickrun#is_running()*
 quickrun#module#exists()	quickrun.txt	/*quickrun#module#exists()*
 quickrun#module#get()	quickrun.txt	/*quickrun#module#get()*
 quickrun#module#get_kinds()	quickrun.txt	/*quickrun#module#get_kinds()*
@@ -1123,8 +1136,12 @@ syntastic-checker-options	syntastic.txt	/*syntastic-checker-options*
 syntastic-commands	syntastic.txt	/*syntastic-commands*
 syntastic-compatibility	syntastic.txt	/*syntastic-compatibility*
 syntastic-composite	syntastic.txt	/*syntastic-composite*
+syntastic-config-debug	syntastic.txt	/*syntastic-config-debug*
+syntastic-config-empty	syntastic.txt	/*syntastic-config-empty*
 syntastic-config-exec	syntastic.txt	/*syntastic-config-exec*
+syntastic-config-filtering	syntastic.txt	/*syntastic-config-filtering*
 syntastic-config-makeprg	syntastic.txt	/*syntastic-config-makeprg*
+syntastic-config-no-makeprgbuild	syntastic.txt	/*syntastic-config-no-makeprgbuild*
 syntastic-config-sort	syntastic.txt	/*syntastic-config-sort*
 syntastic-contents	syntastic.txt	/*syntastic-contents*
 syntastic-csh	syntastic.txt	/*syntastic-csh*
@@ -1145,6 +1162,7 @@ syntastic-netrw	syntastic.txt	/*syntastic-netrw*
 syntastic-notes	syntastic.txt	/*syntastic-notes*
 syntastic-powerline	syntastic.txt	/*syntastic-powerline*
 syntastic-powershell	syntastic.txt	/*syntastic-powershell*
+syntastic-profiling	syntastic.txt	/*syntastic-profiling*
 syntastic-pymode	syntastic.txt	/*syntastic-pymode*
 syntastic-quickstart	syntastic.txt	/*syntastic-quickstart*
 syntastic-recommended	syntastic.txt	/*syntastic-recommended*

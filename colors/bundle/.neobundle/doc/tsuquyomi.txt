@@ -1,6 +1,6 @@
 *tsuquyomi* is a Vim plugin for TypeScript.
 
-Version: 0.5.0
+Version: 0.6.0
 Author : Quramy <yosuke.kurami@gmail.com>
 License: MIT license  {{{
     Permission is hereby granted, free of charge, to any person obtaining
@@ -194,6 +194,11 @@ COMMANDS					*tsuquyomi-commands*
 		Show all compilation errors of your project in QuickFix window.
 		This command requires TypeScript@v1.6.0 or later.
 
+						*:TsuquyomiSeaarch*
+						*:TsuSearch*
+:TsuquyomiSearch {keyword}
+		Search locations which containts {keyword} from ptoject.
+
 Todo
 
 ------------------------------------------------------------------------------
@@ -256,6 +261,12 @@ g:tsuquyomi_definition_split	(default 0)
 		* 2: |:vplit|
 		* 3: |:tabedit|
 
+					*g:tsuquyomi_completion_detail*
+g:tsuquyomi_completion_detail		(default 0)
+		Whether to show details of complete menu when |tsuquyomi#complete|.
+		This options makes sence when |completeopt| includes "menu".
+		NOTE: If it's set, completions gets slow.
+
 					*g:tsuquyomi_completion_case_sensitive*
 g:tsuquyomi_completion_case_sensitive	(default 0)
 		Whether to search completion case-sensitively when
@@ -303,6 +314,11 @@ Normal mode key mappings.
 <Plug>(TsuquyomiRenameSymbolC)
 		Rename the identifier under the cursor to a new name.
 		Please see |:TsuquyomiRenameSymbolC|.
+
+						*<Plug>(TsuquyomiImport)*
+<Plug>(TsuquyomiImport)
+		Generate ES6 import declaration whose alias is under 
+		the cursor. See |:TsuquyomiImport|.
 
 Following keymappings are default keymappings.
 

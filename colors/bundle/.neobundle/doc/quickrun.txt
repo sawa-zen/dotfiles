@@ -171,6 +171,9 @@ quickrun#sweep_sessions()			*quickrun#sweep_sessions()*
 	Stops the sessions under execution.  This is called before new
 	execution.  When execution doesn't end, you can call this by manually.
 
+quickrun#is_running()				*quickrun#is_running()*
+	Checks any session is running.  Returns non-zero when running.
+
 
 The following functions are deprecated.  These will be removed at next
 version.
@@ -592,7 +595,7 @@ available by default.
   Option ~
   outputter/loclist/errorformat	Default: "&errorformat"
 	'errorformat' option to parse the output.
-  outputter/loclist/open_cmd		Default: "copen"
+  outputter/loclist/open_cmd		Default: "lopen"
 	The command to open |location-list-window|.
 	The window is closed automatically when the result is empty.
 	You shouldn't use "cwindow".  Some features don't work well.
