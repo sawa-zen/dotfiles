@@ -1,6 +1,6 @@
 *tsuquyomi* はTypeScript向けのVim plugin です.
 
-Version: 0.5.0
+Version: 0.5.1
 Author : Quramy <yosuke.kurami@gmail.com>
 License: MIT license  {{{
     Permission is hereby granted, free of charge, to any person obtaining
@@ -199,6 +199,11 @@ Prompt:
 		表示します.
 		このコマンドにはTypeScript@v1.6.0以上が必要です.
 
+						*:TsuquyomiSeaarch*
+						*:TsuSearch*
+:TsuquyomiSearch {keyword}
+		プロジェクトで {keyword} を含んでいる箇所を検索します.
+
 Todo
 
 ------------------------------------------------------------------------------
@@ -263,6 +268,13 @@ g:tsuquyomi_definition_split	(デフォルト値 0)
 		* 2: |:vsplit|
 		* 3: |:tabedit|
 
+					*g:tsuquyomi_completion_detail*
+g:tsuquyomi_completion_detail		(デフォルト値 0)
+		|tsuquyomi#complete|実行時に詳細な補完メニューを作成するかどうか.
+		このオプションは|completeopt|に "menu"が含まれるときにのみ
+		意味を持つ.
+		NOTE: このオプションを1に設定した場合, 補完速度は遅くなる
+
 					*g:tsuquyomi_completion_case_sensitive*
 g:tsuquyomi_completion_case_sensitive	(デフォルト値 0)
 		|tsuquyomi#complete|実行時に補完候補をcase-sensitiveに
@@ -313,6 +325,11 @@ g:tsuquyomi_save_onrename	(デフォルト値 0)
 <Plug>(TsuquyomiRenameSymbolC)
 		カーソル直下のシンボルをコメントも含めて別名に変更する.
 		|:TsuquyomiRenameSymbolC|を参照のこと.
+
+						*<Plug>(TsuquyomiImport)*
+<Plug>(TsuquyomiImport)
+		カーソル直下のシンボルに対応するES6 import文を生成する.
+		|:TsuquyomiImport|を参照のこと.
 
 デフォルトキーマップは下記の通り:
 デフォルトキーマップは下記の通り:
