@@ -43,6 +43,7 @@ NeoBundle 'leafgarland/typescript-vim' " typescriptのsyntax
 NeoBundle 'mattn/emmet-vim' " emmet
 NeoBundle 'tikhomirov/vim-glsl' " GLSL
 NeoBundle 'tomtom/tcomment_vim' " コメントアウト
+NeoBundle 'editorconfig/editorconfig-vim' " エディターコンフィグ
 call neobundle#end()
 
 " ファイルタイプの自動検出、ファイルタイプ用の
