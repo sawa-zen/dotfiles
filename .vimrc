@@ -66,8 +66,8 @@ NeoBundleCheck
 " シンタックスハイライトを許可
 syntax enable
 
-" カラーはmolokaiを使用
-colorscheme molokai
+" カラースキームを設定
+colorscheme iceberg
 
 " エンコーディングをutf-8に自動設定
 set encoding=utf-8
@@ -139,6 +139,8 @@ let g:syntastic_mode_map = {
   \ 'passive_filetypes': ['html', 'typescript']
   \}
 let g:syntastic_auto_loc_list = 1
+let g:syntastic_eruby_ruby_quiet_messages =
+    \ {'regex': 'possibly useless use of a variable in void context'}
 
 " crip.vim
 let g:ctrlp_map = '<c-p>'

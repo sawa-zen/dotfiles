@@ -15,6 +15,15 @@ vimの画面でNeoBundleのプラグインをインストール
 :NeoBundleInstall
 ```
 
+## NeoCompleteの準備
+
+vimを入れなおす
+
+```bash
+$ brew uninstall vim
+$ brew install vim --with-lua
+```
+
 ## Rictyフォントの用意
 
 1. Rictyフォントをインストール
