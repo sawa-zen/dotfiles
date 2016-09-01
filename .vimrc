@@ -44,6 +44,7 @@ NeoBundle 'mattn/emmet-vim' " emmet
 NeoBundle 'tikhomirov/vim-glsl' " GLSL
 NeoBundle 'tomtom/tcomment_vim' " コメントアウト
 NeoBundle 'editorconfig/editorconfig-vim' " エディターコンフィグ
+NeoBundle "ctrlpvim/ctrlp.vim" " ファイル検索
 call neobundle#end()
 
 " ファイルタイプの自動検出、ファイルタイプ用の
@@ -138,6 +139,10 @@ let g:syntastic_mode_map = {
   \ 'passive_filetypes': ['html', 'typescript']
   \}
 let g:syntastic_auto_loc_list = 1
+
+" crip.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 """"""""""""""""""""
 
