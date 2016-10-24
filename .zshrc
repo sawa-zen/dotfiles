@@ -51,3 +51,6 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # FLASH開発のためのFLEXのパスを通す
 PATH=$PATH:~/develop/SDKs/flex_4/bin
+
+# yarnの環境変数
+export PATH="$HOME/.yarn/bin:$PATH"
