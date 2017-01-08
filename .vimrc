@@ -65,6 +65,9 @@ NeoBundleCheck
 " Basic Setting for Vim
 """"""""""""""""""""
 
+" swapファイルを生成しない
+set noswapfile
+
 " シンタックスハイライトを許可
 syntax enable
 
