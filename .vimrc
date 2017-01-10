@@ -65,11 +65,14 @@ NeoBundleCheck
 " Basic Setting for Vim
 """"""""""""""""""""
 
+" swapファイルを生成しない
+set noswapfile
+
 " シンタックスハイライトを許可
 syntax enable
 
 " カラースキームを設定
-colorscheme iceberg
+colorscheme molokai
 
 " エンコーディングをutf-8に自動設定
 set encoding=utf-8
