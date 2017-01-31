@@ -17,6 +17,7 @@ NeoBundle 'lilydjwg/colorizer' " カラーコードを色付きでハイライ�
 NeoBundle 'pekepeke/titanium-vim'             " Titanium
 NeoBundle 'localrc.vim' " vimのインデントをディレクトリごとに調整
 NeoBundle 'scrooloose/syntastic.git' " 構文エラーを自動で出力
+NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
 NeoBundle 'grep.vim' " grepを便利にしてくれる子
 NeoBundle 'airblade/vim-gitgutter' " gitの差分を表示するぜ
 NeoBundle 'thinca/vim-quickrun' " quickrunの実行
@@ -151,7 +152,7 @@ let g:syntastic_enable_signs = 1
 " location list を常に更新
 let g:syntastic_always_populate_loc_list = 0
 " location list を常に表示
-let g:syntastic_auto_loc_list = 0
+let g:syntastic_auto_loc_list = 1
 " ファイルを開いた時にチェックを実行する
 let g:syntastic_check_on_open = 1
 " :wq で終了する時もチェックする
