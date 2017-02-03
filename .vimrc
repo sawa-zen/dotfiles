@@ -154,7 +154,7 @@ let g:syntastic_always_populate_loc_list = 0
 " location list を常に表示
 let g:syntastic_auto_loc_list = 1
 " ファイルを開いた時にチェックを実行する
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 " :wq で終了する時もチェックする
 let g:syntastic_check_on_wq = 0
 
