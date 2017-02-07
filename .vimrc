@@ -21,7 +21,6 @@ NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
 NeoBundle 'grep.vim' " grepを便利にしてくれる子
 NeoBundle 'airblade/vim-gitgutter' " gitの差分を表示するぜ
 NeoBundle 'thinca/vim-quickrun' " quickrunの実行
-NeoBundle 'taichouchou2/vim-javascript'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'bling/vim-airline' " ステータスバー
@@ -144,6 +143,9 @@ let g:syntastic_mode_map = {
   \ 'active_filetypes': ['javascript'],
   \ 'passive_filetypes': ['html', 'typescript']
   \}
+" jsdocのハイライトを行う
+let g:javascript_plugin_jsdoc = 1
+
 let g:syntastic_eruby_ruby_quiet_messages =
     \ {'regex': 'possibly useless use of a variable in void context'}
 
