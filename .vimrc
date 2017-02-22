@@ -165,7 +165,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " インサートモードからの復帰を早く
-set timeout timeoutlen=50
+set timeout timeoutlen=100
 
 """"""""""""""""""""
 
