@@ -12,7 +12,6 @@ NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/vimshell'
 NeoBundle 'lilydjwg/colorizer' " カラーコードを色付きでハイライト
 NeoBundle 'pekepeke/titanium-vim'             " Titanium
 NeoBundle 'scrooloose/syntastic.git' " 構文エラーを自動で出力
