@@ -15,10 +15,8 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'lilydjwg/colorizer' " カラーコードを色付きでハイライト
 NeoBundle 'pekepeke/titanium-vim'             " Titanium
-NeoBundle 'localrc.vim' " vimのインデントをディレクトリごとに調整
 NeoBundle 'scrooloose/syntastic.git' " 構文エラーを自動で出力
 NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
-NeoBundle 'grep.vim' " grepを便利にしてくれる子
 NeoBundle 'airblade/vim-gitgutter' " gitの差分を表示するぜ
 NeoBundle 'thinca/vim-quickrun' " quickrunの実行
 NeoBundle 'pangloss/vim-javascript'
@@ -165,7 +163,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " インサートモードからの復帰を早く
-set timeout timeoutlen=100
+set timeout timeoutlen=300
 
 """"""""""""""""""""
 
