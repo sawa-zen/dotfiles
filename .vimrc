@@ -112,6 +112,12 @@ if exists('&colorcolumn')
   autocmd FileType sh,perl,vim,ruby,python,javascript setlocal textwidth=80
 endif
 
+" スペルチェック
+set spell
+set spelllang=en,cjk
+hi clear SpellBad
+hi SpellBad cterm=underline
+
 " Macのクリップボードにヤンク
 set clipboard=unnamed,autoselect
 
