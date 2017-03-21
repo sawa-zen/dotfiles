@@ -13,17 +13,19 @@ NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'lilydjwg/colorizer' " カラーコードを色付きでハイライト
-NeoBundle 'pekepeke/titanium-vim'             " Titanium
 NeoBundle 'scrooloose/syntastic.git' " 構文エラーを自動で出力
 NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
 NeoBundle 'airblade/vim-gitgutter' " gitの差分を表示するぜ
 NeoBundle 'thinca/vim-quickrun' " quickrunの実行
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'mxw/vim-jsx'
+NeoBundleLazy 'pangloss/vim-javascript', {
+            \ 'autoload': { 'filetypes': 'javascript'}
+            \ }
+NeoBundleLazy 'mxw/vim-jsx', {
+            \ 'autoload': { 'filetypes': 'javascript'}
+            \ }
 NeoBundle 'bling/vim-airline' " ステータスバー
 NeoBundle 'tpope/vim-fugitive' " branch表示
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'chase/vim-ansible-yaml'
 NeoBundle 'mattn/emmet-vim' " emmet
 NeoBundle 'digitaltoad/vim-jade' " jadeのハイライト
 NeoBundle 'Shougo/vimproc.vim', {
@@ -35,15 +37,22 @@ NeoBundle 'Shougo/vimproc.vim', {
       \     'unix' : 'gmake',
       \    },
       \ }
-NeoBundle 'Quramy/tsuquyomi' " typescriptのサーバー
-NeoBundle 'leafgarland/typescript-vim' " typescriptのsyntax
-NeoBundle 'mattn/emmet-vim' " emmet
-NeoBundle 'tikhomirov/vim-glsl' " GLSL
+NeoBundleLazy 'Quramy/tsuquyomi', {
+            \ 'autoload': { 'filetypes': 'ts'}
+            \ }
+NeoBundle 'leafgarland/typescript-vim', {
+            \ 'autoload': { 'filetypes': 'ts'}
+            \ }
+NeoBundleLazy 'tikhomirov/vim-glsl', {
+            \ 'autoload': { 'filetypes': 'glsl'}
+            \ }
 NeoBundle 'tomtom/tcomment_vim' " コメントアウト
 NeoBundle 'editorconfig/editorconfig-vim' " エディターコンフィグ
 NeoBundle "ctrlpvim/ctrlp.vim" " ファイル検索
 NeoBundle 'hail2u/vim-css3-syntax' " css3のシンタックス
-NeoBundle 'cakebaker/scss-syntax.vim' " scssのシンタックス
+NeoBundleLazy 'cakebaker/scss-syntax.vim', {
+            \ 'autoload': { 'filetypes': 'scss'}
+            \ }
 call neobundle#end()
 
 " ファイルタイプの自動検出、ファイルタイプ用の
@@ -139,8 +148,8 @@ autocmd QuickFixCmdPost    l* nested lwindow
 autocmd BufWritePre * :%s/\s\+$//ge
 
 " JavaScriptの構文チェックはeslintで行う
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exec = 'eslint_d'
+" let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
 " ファイル保存時にsyntaxチェック
 let g:syntastic_mode_map = {
@@ -170,7 +179,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " インサートモードからの復帰を早く
-set timeout timeoutlen=300
+set timeout timeoutlen=500 ttimeoutlen=75
 
 """"""""""""""""""""
 
