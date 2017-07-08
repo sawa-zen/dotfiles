@@ -59,3 +59,5 @@ export PATH="$HOME/.yarn/bin:$PATH"
 export ANDROID_HOME=/usr/local/share/android-sdk
 export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export ANDROID_SDK_ROOT=$ANDROID_HOME
+
+export REACT_EDITOR='vim'
