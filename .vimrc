@@ -14,7 +14,6 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'lilydjwg/colorizer' " カラーコードを色付きでハイライト
 NeoBundle 'scrooloose/syntastic.git' " 構文エラーを自動で出力
-NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
 NeoBundle 'airblade/vim-gitgutter' " gitの差分を表示するぜ
 NeoBundle 'thinca/vim-quickrun' " quickrunの実行
 NeoBundleLazy 'pangloss/vim-javascript', {
@@ -144,10 +143,6 @@ autocmd QuickFixCmdPost    l* nested lwindow
 
 " 行末の余分なスペースを保存時に削除
 autocmd BufWritePre * :%s/\s\+$//ge
-
-" JavaScriptの構文チェックはeslintで行う
-" let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
 " ファイル保存時にsyntaxチェック
 let g:syntastic_mode_map = {
