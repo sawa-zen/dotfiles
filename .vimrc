@@ -20,9 +20,6 @@ NeoBundle 'thinca/vim-quickrun' " quickrunの実行
 NeoBundleLazy 'pangloss/vim-javascript', {
             \ 'autoload': { 'filetypes': 'javascript'}
             \ }
-NeoBundleLazy 'mxw/vim-jsx', {
-            \ 'autoload': { 'filetypes': 'javascript'}
-            \ }
 NeoBundle 'bling/vim-airline' " ステータスバー
 NeoBundle 'tpope/vim-fugitive' " branch表示
 NeoBundle 'scrooloose/nerdtree'
@@ -53,6 +50,7 @@ NeoBundle 'hail2u/vim-css3-syntax' " css3のシンタックス
 NeoBundleLazy 'cakebaker/scss-syntax.vim', {
             \ 'autoload': { 'filetypes': 'scss'}
             \ }
+NeoBundle 'maxmellon/vim-jsx-pretty'
 call neobundle#end()
 
 " ファイルタイプの自動検出、ファイルタイプ用の
