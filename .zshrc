@@ -54,3 +54,8 @@ PATH=$PATH:~/develop/SDKs/flex_4/bin
 
 # yarnの環境変数
 export PATH="$HOME/.yarn/bin:$PATH"
+
+# Android SDK
+export ANDROID_HOME=/usr/local/share/android-sdk
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export ANDROID_SDK_ROOT=$ANDROID_HOME
