@@ -47,7 +47,7 @@ NeoBundle 'editorconfig/editorconfig-vim' " エディターコンフィグ
 NeoBundle "ctrlpvim/ctrlp.vim" " ファイル検索
 NeoBundle 'hail2u/vim-css3-syntax' " css3のシンタックス
 NeoBundleLazy 'cakebaker/scss-syntax.vim', {
-            \ 'autoload': { 'filetypes': 'scss'}
+            \ 'autoload': { 'filetypes': ['css', 'scss']}
             \ }
 NeoBundle 'maxmellon/vim-jsx-pretty'
 call neobundle#end()
@@ -184,6 +184,8 @@ set timeout timeoutlen=500 ttimeoutlen=75
 
 " mdファイルをmarkdownファイルとして認識させる
 au BufNewFile,BufRead *.md :set filetype=markdown
+" cssはscssのシンタックスを表示
+au BufRead,BufNewFile *.css set filetype=scss
 
 """"""""""""""""""""
 
