@@ -13,7 +13,6 @@ NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'lilydjwg/colorizer' " カラーコードを色付きでハイライト
-NeoBundle 'scrooloose/syntastic.git' " 構文エラーを自動で出力
 NeoBundle 'airblade/vim-gitgutter' " gitの差分を表示するぜ
 NeoBundle 'thinca/vim-quickrun' " quickrunの実行
 NeoBundleLazy 'pangloss/vim-javascript', {
@@ -144,12 +143,6 @@ autocmd QuickFixCmdPost    l* nested lwindow
 " 行末の余分なスペースを保存時に削除
 autocmd BufWritePre * :%s/\s\+$//ge
 
-" ファイル保存時にsyntaxチェック
-let g:syntastic_mode_map = {
-  \ 'mode': 'active',
-  \ 'active_filetypes': ['javascript'],
-  \ 'passive_filetypes': ['html', 'typescript']
-  \}
 " jsdocのハイライトを行う
 let g:javascript_plugin_jsdoc = 1
 
@@ -162,10 +155,6 @@ let g:syntastic_enable_signs = 1
 let g:syntastic_always_populate_loc_list = 0
 " location list を常に表示
 let g:syntastic_auto_loc_list = 1
-" ファイルを開いた時にチェックを実行する
-let g:syntastic_check_on_open = 0
-" :wq で終了する時もチェックする
-let g:syntastic_check_on_wq = 0
 
 " crip.vim
 let g:ctrlp_map = '<c-p>'
@@ -184,7 +173,7 @@ set timeout timeoutlen=500 ttimeoutlen=75
 
 " mdファイルをmarkdownファイルとして認識させる
 au BufNewFile,BufRead *.md :set filetype=markdown
-" cssはscssのシンタックスを表示
+" cssはscssのハイライトを表示
 au BufRead,BufNewFile *.css set filetype=scss
 
 """"""""""""""""""""
