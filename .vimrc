@@ -23,6 +23,7 @@ NeoBundle 'tpope/vim-fugitive' " branch表示
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'mattn/emmet-vim' " emmet
 NeoBundle 'digitaltoad/vim-jade' " jadeのハイライト
+NeoBundle 'nelsyeung/twig.vim'
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
       \     'windows' : 'tools\\update-dll-mingw',
