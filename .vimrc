@@ -161,6 +161,7 @@ let g:syntastic_auto_loc_list = 1
 " crip.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " インサートモードからの復帰を早く
 set timeout timeoutlen=500 ttimeoutlen=75
