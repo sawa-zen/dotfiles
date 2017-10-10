@@ -163,6 +163,7 @@ let g:syntastic_auto_loc_list = 1
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_show_hidden = 1
 
 " インサートモードからの復帰を早く
 set timeout timeoutlen=500 ttimeoutlen=75
