@@ -8,3 +8,5 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 # bin下設定
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
