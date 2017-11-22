@@ -37,7 +37,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundleLazy 'Quramy/tsuquyomi', {
             \ 'autoload': { 'filetypes': 'ts'}
             \ }
-NeoBundle 'leafgarland/typescript-vim', {
+NeoBundleLazy 'leafgarland/typescript-vim', {
             \ 'autoload': { 'filetypes': 'ts'}
             \ }
 NeoBundleLazy 'tikhomirov/vim-glsl', {
@@ -51,7 +51,9 @@ NeoBundleLazy 'cakebaker/scss-syntax.vim', {
             \ 'autoload': { 'filetypes': ['css', 'scss']}
             \ }
 NeoBundle 'maxmellon/vim-jsx-pretty'
-NeoBundle 'styled-components/vim-styled-components'
+NeoBundleLazy 'styled-components/vim-styled-components', {
+            \ 'autoload': { 'filetypes': ['javascript'] }
+            \ }
 call neobundle#end()
 
 " ファイルタイプの自動検出、ファイルタイプ用の
