@@ -22,15 +22,6 @@ alias ls='ls -G'
 # ls -lをllにする
 alias ll='ls -laG'
 
-# アンドロイドシミュレータ
-alias aaaa="ti build -p android -C 'Samsung Galaxy S4 - 4.4.4 - API 19 - 1080x1920'"
-
-# アンドロイド実機デバック
-alias aaaad="titanium build -p android --log-level trace --target device"
-
-# titanium Retina 4.5-inch
-alias tttt='ti build -p ios -T simulator --log-level debug --device-id AA4A38E8-41D6-4E40-9B79-C7523707D5E5'
-
 # ファイルの拡張子指定の検索コマンド
 function ff (){
     find . -type f -name "*.$1" | xargs grep -n "$2"
@@ -42,16 +33,6 @@ alias ddms='/Users/sawada/Library/android-sdk-macosx/tools/ddms'
 # 一個のペインで使えるリミットの制限をあげる
 ulimit -n 10000
 
-# rbenvのPATHを通すおまじない
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-# nodebrewのパスを通す
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-
-# FLASH開発のためのFLEXのパスを通す
-PATH=$PATH:~/develop/SDKs/flex_4/bin
-
 # yarnの環境変数
 export PATH="$HOME/.yarn/bin:$PATH"
 
@@ -61,8 +42,3 @@ export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 
 export REACT_EDITOR='vim'
-
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
