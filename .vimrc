@@ -16,9 +16,7 @@ NeoBundle 'lilydjwg/colorizer' " カラーコードを色付きでハイライ�
 NeoBundle 'airblade/vim-gitgutter' " gitの差分を表示するぜ
 NeoBundle 'thinca/vim-quickrun' " quickrunの実行
 NeoBundle 'tpope/vim-fugitive' " git系の便利コマンド
-NeoBundleLazy 'pangloss/vim-javascript', {
-            \ 'autoload': { 'filetypes': 'javascript'}
-            \ }
+NeoBundleLazy 'othree/yajs.vim', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'bling/vim-airline' " ステータスバー
 NeoBundle 'tpope/vim-fugitive' " branch表示
 NeoBundle 'scrooloose/nerdtree'
