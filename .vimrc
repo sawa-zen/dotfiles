@@ -49,9 +49,7 @@ NeoBundleLazy 'cakebaker/scss-syntax.vim', {
             \ 'autoload': { 'filetypes': ['css', 'scss']}
             \ }
 NeoBundle 'maxmellon/vim-jsx-pretty'
-NeoBundleLazy 'styled-components/vim-styled-components', {
-            \ 'autoload': { 'filetypes': ['javascript'] }
-            \ }
+NeoBundle 'djoshea/vim-autoread'
 call neobundle#end()
 
 " ファイルタイプの自動検出、ファイルタイプ用の
