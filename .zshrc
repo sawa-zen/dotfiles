@@ -22,6 +22,12 @@ alias ls='ls -G'
 # ls -lをllにする
 alias ll='ls -laG'
 
+# vimをnvimに
+alias vim='nvim'
+
+# githubを開くコマンド
+alias gopen='hub browse'
+
 # ファイルの拡張子指定の検索コマンド
 function ff (){
     find . -type f -name "*.$1" | xargs grep -n "$2"
