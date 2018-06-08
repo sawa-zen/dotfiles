@@ -21,8 +21,6 @@ NeoBundle 'bling/vim-airline' " ステータスバー
 NeoBundle 'tpope/vim-fugitive' " branch表示
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'mattn/emmet-vim' " emmet
-NeoBundle 'digitaltoad/vim-jade' " jadeのハイライト
-NeoBundle 'nelsyeung/twig.vim'
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
       \     'windows' : 'tools\\update-dll-mingw',
@@ -32,12 +30,9 @@ NeoBundle 'Shougo/vimproc.vim', {
       \     'unix' : 'gmake',
       \    },
       \ }
-NeoBundleLazy 'Quramy/tsuquyomi', {
-            \ 'autoload': { 'filetypes': 'ts'}
-            \ }
-NeoBundleLazy 'leafgarland/typescript-vim', {
-            \ 'autoload': { 'filetypes': 'ts'}
-            \ }
+NeoBundle 'Quramy/tsuquyomi'
+NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'peitalin/vim-jsx-typescript'
 NeoBundleLazy 'tikhomirov/vim-glsl', {
             \ 'autoload': { 'filetypes': 'glsl'}
             \ }
@@ -137,6 +132,7 @@ inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
 let g:typescript_compiler_options = '-sourcemap'
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
 
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
