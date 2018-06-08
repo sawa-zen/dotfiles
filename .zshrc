@@ -56,3 +56,14 @@ export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
 export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 export PATH=$PATH:"$HOME/mini3/bin"
+
+# go
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/sawa-zen/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/sawa-zen/google-cloud-sdk/path.zsh.inc'; fi
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/sawa-zen/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/sawa-zen/google-cloud-sdk/completion.zsh.inc'; fi
+
+#vim
+export XDG_CONFIG_HOME="$HOME/.config"
