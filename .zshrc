@@ -58,8 +58,10 @@ export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 export PATH=$PATH:"$HOME/mini3/bin"
 
 # go
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/go
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/sawa-zen/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/sawa-zen/google-cloud-sdk/path.zsh.inc'; fi
 # The next line enables shell command completion for gcloud.
