@@ -64,10 +64,6 @@ set spelllang=en,cjk
 hi clear SpellBad
 hi SpellBad cterm=underline
 
-" 括弧の補完
-inoremap {<Enter> {}<Left><CR><ESC><S-o>
-inoremap (<Enter> ()<Left><CR><ESC><S-o>
-
 " 行末の余分なスペースを保存時に削除
 autocmd BufWritePre * :%s/\s\+$//ge
 
@@ -122,8 +118,6 @@ if dein#load_state('~/.cache/dein')
 
    " Deoplete:
   call dein#add('Shougo/deoplete.nvim', {'hook_add': "call DeopleteConfig()"})
-  "" Deopleet Suorces:
-  call dein#add('carlitux/deoplete-ternjs', {'on_ft': ['javascript', 'es6']})
 
   call dein#add('Shougo/dein.vim')
   call dein#add('tomasr/molokai')
@@ -143,6 +137,11 @@ if dein#load_state('~/.cache/dein')
   call dein#add('carlitux/deoplete-ternjs',  {'on_ft': ['javascript', 'es6']})
   call dein#add('leafgarland/typescript-vim',  {'on_ft': ['typescript']})
   call dein#add('Quramy/tsuquyomi',  {'on_ft': ['typescript']})
+  call dein#add('styled-components/vim-styled-components', {'on_ft': ['javascript', 'typescript']})
+
+  " GO
+  call dein#add('fatih/vim-go',  {'on_ft': ['go']})
+  call dein#add('zchee/deoplete-go',  {'on_ft': ['go']})
 
   " Required:
   call dein#end()
@@ -225,4 +224,13 @@ let g:airline_section_b =
       \ '%{""!=airline#extensions#branch#get_head()?("  " . g:airline_left_alt_sep . " "):""}' .
       \ '%t%( %M%)'
 let g:airline_section_c = ''
+""""""""""""""""""""
+
+
+""""""""""""""""""""
+" tsuquyomi
+""""""""""""""""""""
+
+let g:tsuquyomi_disable_quickfix = 1
+
 """"""""""""""""""""
