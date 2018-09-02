@@ -88,7 +88,17 @@ set updatetime=100
 
 "Python3 support
 let g:python_host_prog = expand('$HOME') . '/.anyenv/envs/pyenv/shims/python2'
-let g:python3_host_prog = expand('$HOME') . '/.anyenv/envs/pyenv/shims/python'
+let g:python3_host_prog = $PYENV_ROOT . '/shims/python3.6'
+
+" typesript
+autocmd BufRead,BufNewFile *.ts,*.tsx set filetype=typescript
+autocmd FileType typescript setlocal completeopt-=menu
+autocmd BufEnter * :syntax sync minlines=200
+autocmd FileType typescript nmap <Leader>e <Plug>(TsuquyomiRenameSymbol)
+let g:tsuquyomi_definition_split = 3
+
+" Vue
+autocmd BufNewFile,BufRead *.{vue*} set filetype=html
 
 """"""""""""""""""""
 
@@ -133,11 +143,13 @@ if dein#load_state('~/.cache/dein')
   call dein#add('mattn/emmet-vim',  {'on_ft': ['html', 'javascript', 'typescript','es6']})
   call dein#add('othree/yajs.vim',  {'on_ft': ['javascript', 'es6']})
   call dein#add('othree/es.next.syntax.vim',  {'on_ft': ['javascript', 'es6']})
-  call dein#add('maxmellon/vim-jsx-pretty',  {'on_ft': ['javascript', 'es6']})
+  call dein#add('maxmellon/vim-jsx-pretty',  {'on_ft': ['javascript', 'es6', 'typescript']})
   call dein#add('carlitux/deoplete-ternjs',  {'on_ft': ['javascript', 'es6']})
   call dein#add('leafgarland/typescript-vim',  {'on_ft': ['typescript']})
   call dein#add('Quramy/tsuquyomi',  {'on_ft': ['typescript']})
   call dein#add('styled-components/vim-styled-components', {'on_ft': ['javascript', 'typescript']})
+  call dein#add('leafgarland/typescript-vim', { 'on_ft':['typescript'] })
+  call dein#add('tikhomirov/vim-glsl')
 
   " GO
   call dein#add('fatih/vim-go',  {'on_ft': ['go']})
@@ -232,5 +244,14 @@ let g:airline_section_c = ''
 """"""""""""""""""""
 
 let g:tsuquyomi_disable_quickfix = 1
+
+""""""""""""""""""""
+
+
+""""""""""""""""""""
+" glsl
+""""""""""""""""""""
+
+autocmd! BufNewFile,BufRead *.glsl set ft=glsl
 
 """"""""""""""""""""
