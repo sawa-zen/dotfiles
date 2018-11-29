@@ -52,8 +52,6 @@ export REACT_EDITOR='vim'
 # bin下設定
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
 
 # go
 export GOROOT=/usr/local/opt/go/libexec

@@ -74,8 +74,8 @@ let g:syntastic_always_populate_loc_list = 0
 " location list を常に表示
 let g:syntastic_auto_loc_list = 1
 
-" clip board
-set clipboard+=unnamedplus
+" " clip board
+set clipboard=unnamed
 
 " crip.vim
 let g:ctrlp_map = '<c-p>'
