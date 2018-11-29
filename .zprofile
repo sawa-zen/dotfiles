@@ -9,5 +9,5 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 # The original version is saved in .zprofile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 
-export PATH="$HOME/.anyenv/bin:$PATH
+export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
