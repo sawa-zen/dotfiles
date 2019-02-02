@@ -185,6 +185,7 @@ let g:deoplete#auto_refresh_delay = 100
 let g:deoplete#enable_smart_case = 1
 let g:deoplete#file#enable_buffer_path = 1
 let g:deoplete#max_list = 10000
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 
 """"""""""""""""""""
 " NERDTree

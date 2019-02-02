@@ -53,10 +53,9 @@ export REACT_EDITOR='vim'
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
-# go
-export GOROOT=/usr/local/opt/go/libexec
-export GOPATH=$HOME
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+# GOPATH, GOROOT
+export GOPATH=$HOME/develop/go/
+export PATH=$GOPATH/bin:$PATH
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/sawa-zen/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/sawa-zen/google-cloud-sdk/path.zsh.inc'; fi
