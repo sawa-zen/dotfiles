@@ -1,10 +1,5 @@
 # 環境構築
 
-## eslintのインストール
-```terminal
-npm install -g eslint
-```
-
 ## NeoBundleのインストール
 ```terminal
 mkdir -p ~/.vim/bundle
