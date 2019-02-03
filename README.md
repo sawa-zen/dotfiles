@@ -1,7 +1,7 @@
 # Dotfiles
 
 ```bash
-$ curl -L http://bit.ly/dot-sawa-zen
+$ curl -L bit.ly/dot-sawa-zen | bash
 ```
 
 <!-- ## NeoBundleのインストール -->
