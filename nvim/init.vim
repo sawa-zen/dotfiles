@@ -13,9 +13,6 @@ set mouse=a
 " シンタックスハイライトを許可
 syntax enable
 
-" カラースキームを設定
-colorscheme molokai
-
 " エンコーディングをutf-8に自動設定
 set encoding=utf-8
 
@@ -168,6 +165,9 @@ syntax enable
 if dein#check_install()
  call dein#install()
 endif
+
+" カラースキームを設定
+colorscheme molokai
 
 " Tern
 let g:tern_request_timeout = 1
