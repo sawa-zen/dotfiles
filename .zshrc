@@ -53,10 +53,6 @@ export REACT_EDITOR='vim'
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
-# GOPATH, GOROOT
-export GOPATH=$HOME/develop/go/
-export PATH=$GOPATH/bin:$PATH
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/sawa-zen/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/sawa-zen/google-cloud-sdk/path.zsh.inc'; fi
 # The next line enables shell command completion for gcloud.
@@ -64,3 +60,14 @@ if [ -f '/Users/sawa-zen/google-cloud-sdk/completion.zsh.inc' ]; then source '/U
 
 #vim
 export XDG_CONFIG_HOME="$HOME/.config"
+
+export EDITOR='vim'
+eval "$(direnv hook zsh)"
+
+export GOPATH=$HOME/go
+export PATH=$HOME/.anyenv/envs/goenv/shims/bin:$PATH
+export PATH=$GOPATH/bin:$PATH
+
+# ghqとhubとpecoが必要
+alias g='cd $(ghq root)/$(ghq list | peco)'
+alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
