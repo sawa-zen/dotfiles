@@ -1,5 +1,4 @@
-.DS_Store
-*.swp
-リカバリ*.fla
-.idea
-*.iml
+nvim/dein/repos
+nvim/dein/.cache
+nvim/dein/cache_nvim
+nvim/dein/state_nvim.vim

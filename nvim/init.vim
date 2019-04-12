@@ -71,6 +71,9 @@ let g:syntastic_always_populate_loc_list = 0
 " location list を常に表示
 let g:syntastic_auto_loc_list = 1
 
+" Vimの描画更新タイミングを100msに
+set updatetime=100
+
 " " clip board
 set clipboard=unnamed
 
@@ -79,9 +82,6 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:ctrlp_show_hidden = 1
-
-" Vimの描画更新タイミングを100msに
-set updatetime=100
 
 "Python3 support
 let g:python_host_prog = expand('$HOME') . '/.anyenv/envs/pyenv/shims/python2'
@@ -113,46 +113,18 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
-" Required:
+" dein.vimのclone先を指定
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-" Required:
-if dein#load_state('~/.cache/dein')
-  call dein#begin('~/.cache/dein')
+" dein関連設定ファイルの場所
+let s:dein_dir = expand('~/dotfiles/nvim/dein')
 
-  call dein#add('Shougo/dein.vim')
-  call dein#add('Shougo/vimproc.vim', {'build': 'make'})
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
 
-   " Deoplete:
-  call dein#add('Shougo/deoplete.nvim', {'hook_add': "call DeopleteConfig()"})
+  call dein#load_toml(s:dein_dir . '/plugins.toml', {'lazy': 0})
+  call dein#load_toml(s:dein_dir . '/lazy.toml', {'lazy': 1})
 
-  call dein#add('Shougo/dein.vim')
-  call dein#add('tomasr/molokai')
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('airblade/vim-gitgutter')
-  call dein#add('lilydjwg/colorizer')
-  call dein#add('tomtom/tcomment_vim')
-  call dein#add('bling/vim-airline')
-  call dein#add('tpope/vim-fugitive')
-  call dein#add('ctrlpvim/ctrlp.vim')
-
-  " frontend
-  call dein#add('mattn/emmet-vim',  {'on_ft': ['html', 'javascript', 'typescript','es6']})
-  call dein#add('othree/yajs.vim',  {'on_ft': ['javascript', 'es6']})
-  call dein#add('othree/es.next.syntax.vim',  {'on_ft': ['javascript', 'es6']})
-  call dein#add('maxmellon/vim-jsx-pretty',  {'on_ft': ['javascript', 'es6', 'typescript']})
-  call dein#add('carlitux/deoplete-ternjs',  {'on_ft': ['javascript', 'es6']})
-  call dein#add('leafgarland/typescript-vim',  {'on_ft': ['typescript']})
-  call dein#add('Quramy/tsuquyomi',  {'on_ft': ['typescript']})
-  call dein#add('styled-components/vim-styled-components', {'on_ft': ['javascript', 'typescript']})
-  call dein#add('leafgarland/typescript-vim', { 'on_ft':['typescript'] })
-  call dein#add('tikhomirov/vim-glsl')
-
-  " GO
-  call dein#add('fatih/vim-go',  {'on_ft': ['go']})
-  call dein#add('zchee/deoplete-go',  {'on_ft': ['go']})
-
-  " Required:
   call dein#end()
   call dein#save_state()
 endif
@@ -168,6 +140,12 @@ endif
 
 " カラースキームを設定
 colorscheme molokai
+
+
+
+""""""""""""""""""""
+" deoplete
+""""""""""""""""""""
 
 " Tern
 let g:tern_request_timeout = 1
@@ -186,6 +164,8 @@ let g:deoplete#enable_smart_case = 1
 let g:deoplete#file#enable_buffer_path = 1
 let g:deoplete#max_list = 10000
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+
+
 
 """"""""""""""""""""
 " NERDTree
