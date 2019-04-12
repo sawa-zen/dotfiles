@@ -11,8 +11,6 @@
 [core]
 	editor = vim -c \"set fenc=utf-8\"
   excludesfile = ~/.gitignore
-[diff]
-	external = git_diff_wrapper
 [pager]
 	diff =
 [user]
@@ -22,14 +20,14 @@
 	ui = auto
 [credential]
 	helper = osxkeychain
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [ghq]
   root = /Users/sawa-zen/develop
 	root = /Users/sawa-zen/go/src
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[diff]
+  tool = nvimdiff
+[difftool]
+  prompt = false
+[difftool "nvimdiff"]
+  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""

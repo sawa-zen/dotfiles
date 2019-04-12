@@ -71,3 +71,6 @@ export PATH=$GOPATH/bin:$PATH
 # ghqとhubとpecoが必要
 alias g='cd $(ghq root)/$(ghq list | peco)'
 alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+
+# nvimでdiff
+alias vimdiff='nvim -d '
