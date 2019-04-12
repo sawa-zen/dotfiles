@@ -10,7 +10,7 @@
 	tree = log --graph --all --format=\"%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s\"
 [core]
 	editor = vim -c \"set fenc=utf-8\"
-  excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore_global
 [pager]
 	diff =
 [user]
@@ -21,8 +21,8 @@
 [credential]
 	helper = osxkeychain
 [ghq]
-  root = /Users/sawa-zen/develop
-	root = /Users/sawa-zen/go/src
+  root = ~/develop
+	root = ~/go/src
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [diff]
