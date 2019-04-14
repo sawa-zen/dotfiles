@@ -3,6 +3,7 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
+do = ':UpdateRemotePlugins'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'

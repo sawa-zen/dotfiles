@@ -1,35 +1,45 @@
 [[plugins]]
 repo = 'mattn/emmet-vim'
+on_ft = ['javascript.jsx', 'typescript.tsx', 'html']
 
 [[plugins]]
 repo = 'othree/yajs.vim'
+on_ft = ['javascript', 'javascript.jsx']
 
 [[plugins]]
 repo = 'othree/es.next.syntax.vim'
+on_ft = ['javascript', 'javascript.jsx']
 
 [[plugins]]
 repo = 'maxmellon/vim-jsx-pretty'
+on_ft = ['javascript.jsx']
 
 [[plugins]]
-repo = 'carlitux/deoplete-ternjs'
+repo = 'HerringtonDarkholme/yats.vim'
+on_ft = ['typescript', 'typescript.tsx']
 
 [[plugins]]
-repo = 'leafgarland/typescript-vim'
-
-[[plugins]]
-repo = 'Quramy/tsuquyomi'
+repo = 'mhartington/nvim-typescript'
+on_ft = ['typescript', 'typescript.tsx']
+build = './install.sh'
+hook_add = 'let g:nvim_typescript#diagnostics_enable = 0'
 
 [[plugins]]
 repo = 'styled-components/vim-styled-components'
-
-[[plugins]]
-repo = 'leafgarland/typescript-vim'
+on_ft = ['javascript', 'javascript.jsx' 'typescript', 'typescript.tsx']
 
 [[plugins]]
 repo = 'tikhomirov/vim-glsl'
+on_ft = ['glsl']
 
 [[plugins]]
 repo = 'fatih/vim-go'
+on_ft = ['go']
 
 [[plugins]]
 repo = 'zchee/deoplete-go'
+on_ft = ['go']
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = ['toml']
