@@ -74,7 +74,7 @@ let g:syntastic_auto_loc_list = 1
 " Vimの描画更新タイミングを100msに
 set updatetime=100
 
-" " clip board
+" clip board
 set clipboard=unnamed
 
 " crip.vim
@@ -84,15 +84,15 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:ctrlp_show_hidden = 1
 
 "Python3 support
-let g:python_host_prog = expand('$HOME') . '/.anyenv/envs/pyenv/shims/python2'
-let g:python3_host_prog = $PYENV_ROOT . '/shims/python3.6'
+let g:python_host_prog = '/Users/sawa-zen/.anyenv/envs/pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/Users/sawa-zen/.anyenv/envs/pyenv/versions/neovim3/bin/python'
 
 " typesript
-autocmd BufRead,BufNewFile *.ts,*.tsx set filetype=typescript
-autocmd FileType typescript setlocal completeopt-=menu
-autocmd BufEnter * :syntax sync minlines=200
-autocmd FileType typescript nmap <Leader>e <Plug>(TsuquyomiRenameSymbol)
-let g:tsuquyomi_definition_split = 3
+autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+autocmd BufNewFile,BufRead *.ts set filetype=typescript
+
+" jsx
+autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
 
 " Vue
 autocmd BufNewFile,BufRead *.{vue*} set filetype=html
@@ -147,24 +147,8 @@ colorscheme molokai
 " deoplete
 """"""""""""""""""""
 
-" Tern
-let g:tern_request_timeout = 1
-let g:tern_show_signature_in_pum = '0'  " This do disable full signature type on autocomplete
-let g:deoplete#omni_input_patterns = {}
-let g:deoplete#omni_input_patterns.javascript =
-                    \'[^. \t0-9]\.([a-zA-Z_]\w*)?'
-
-let g:deoplete#auto_complete_delay = 0
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_camel_case = 0
-let g:deoplete#enable_ignore_case = 0
-let g:deoplete#enable_refresh_always = 0
-let g:deoplete#auto_refresh_delay = 100
-let g:deoplete#enable_smart_case = 1
-let g:deoplete#file#enable_buffer_path = 1
-let g:deoplete#max_list = 10000
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-
+let g:deoplete#_python_version_check = 3.7.3
 
 
 """"""""""""""""""""
