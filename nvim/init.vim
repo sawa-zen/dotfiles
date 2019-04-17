@@ -94,9 +94,6 @@ autocmd BufNewFile,BufRead *.ts set filetype=typescript
 " jsx
 autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
 
-" Vue
-autocmd BufNewFile,BufRead *.{vue*} set filetype=html
-
 """"""""""""""""""""
 
 
