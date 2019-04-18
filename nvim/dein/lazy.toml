@@ -3,16 +3,12 @@ repo = 'mattn/emmet-vim'
 on_ft = ['javascript.jsx', 'typescript.tsx', 'vue', 'html']
 
 [[plugins]]
-repo = 'othree/yajs.vim'
-on_ft = ['javascript', 'javascript.jsx']
-
-[[plugins]]
-repo = 'othree/es.next.syntax.vim'
+repo = 'pangloss/vim-javascript'
 on_ft = ['javascript', 'javascript.jsx']
 
 [[plugins]]
 repo = 'maxmellon/vim-jsx-pretty'
-on_ft = ['javascript.jsx']
+on_ft = ['javascript', 'javascript.jsx']
 
 [[plugins]]
 repo = 'HerringtonDarkholme/yats.vim'
