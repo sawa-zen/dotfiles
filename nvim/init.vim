@@ -87,15 +87,11 @@ let g:ctrlp_show_hidden = 1
 let g:python_host_prog = '/Users/sawa-zen/.anyenv/envs/pyenv/versions/neovim2/bin/python'
 let g:python3_host_prog = '/Users/sawa-zen/.anyenv/envs/pyenv/versions/neovim3/bin/python'
 
-" typesript
+" filetype
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 autocmd BufNewFile,BufRead *.ts set filetype=typescript
-
-" jsx
-autocmd BufRead,BufNewFile *.jsx set filetype=javascript.jsx
-
-" Vue
-autocmd BufNewFile,BufRead *.{vue*} set filetype=html
+autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+autocmd BufNewFile,BufRead *.glsl set filetype=glsl
 
 """"""""""""""""""""
 
@@ -201,22 +197,4 @@ let g:airline_section_b =
       \ '%{""!=airline#extensions#branch#get_head()?("  " . g:airline_left_alt_sep . " "):""}' .
       \ '%t%( %M%)'
 let g:airline_section_c = ''
-""""""""""""""""""""
-
-
-""""""""""""""""""""
-" tsuquyomi
-""""""""""""""""""""
-
-let g:tsuquyomi_disable_quickfix = 1
-
-""""""""""""""""""""
-
-
-""""""""""""""""""""
-" glsl
-""""""""""""""""""""
-
-autocmd! BufNewFile,BufRead *.glsl set ft=glsl
-
 """"""""""""""""""""

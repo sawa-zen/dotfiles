@@ -71,3 +71,5 @@ alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 
 # nvimでdiff
 alias vimdiff='nvim -d '
+
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
