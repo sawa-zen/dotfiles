@@ -59,7 +59,6 @@ if [ -f '/Users/sawa-zen/google-cloud-sdk/completion.zsh.inc' ]; then source '/U
 export XDG_CONFIG_HOME="$HOME/.config"
 
 export EDITOR='vim'
-eval "$(direnv hook zsh)"
 
 export GOPATH=$HOME/go
 export PATH=$HOME/.anyenv/envs/goenv/shims/bin:$PATH
