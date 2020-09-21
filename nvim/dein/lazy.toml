@@ -25,10 +25,6 @@ on_ft = ['typescript', 'typescript.tsx', 'vue']
 repo = 'mhartington/nvim-typescript'
 on_ft = ['typescript', 'typescript.tsx', 'vue']
 build = './install.sh'
-hook_add = '''
-  let g:nvim_typescript#diagnostics_enable = 0
-  let g:nvim_typescript#vue_support = 1
-'''
 
 # [[plugins]]
 # repo = 'styled-components/vim-styled-components'
