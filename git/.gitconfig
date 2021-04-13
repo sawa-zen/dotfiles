@@ -31,3 +31,5 @@
   prompt = false
 [difftool "nvimdiff"]
   cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+[rebase]
+	autosquash = true
