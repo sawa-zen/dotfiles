@@ -1,46 +1,34 @@
 {
-  "window.zoomLevel": 1,
-  "editor.minimap.enabled": false,
-  "editor.tabSize": 2,
-  "editor.wordWrap": "on",
-  "emmet.includeLanguages": {
-      "javascript": "javascriptreact",
-      "typescript": "typescriptreact"
-  },
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.colorTheme": "Dark (Molokai)",
-  "vim.useSystemClipboard":true,
-  "vim.hlsearch": true,
-  "vim.visualstar": true,
-  "vim.useCtrlKeys": true,
-  "emmet.showSuggestionsAsSnippets": true,
-  "files.exclude": {
-      "**/node_modules": true
-  },
-  "workbench.iconTheme": "material-icon-theme",
-  "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+    "window.zoomLevel": 1,
+    "editor.minimap.enabled": false, // editorの右側に出るサムネイルみたいなのを消す
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
 
-  "editor.formatOnSave": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.tslint": true,
-    "source.fixAll": true
-  },
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Dark (Molokai)",
 
-  "explorer.confirmDragAndDrop": false,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "typescript.preferences.quoteStyle": "single",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "uiflow.enableAutoPreview": true
+    // 保存時の自動fix設定
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode" // フォーマッタをprettierに指定
+    },
+    "editor.formatOnSave": false, // ファイル保存時にPrettierでフォーマット
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true, // ファイル保存時にESLintでフォーマット
+        "source.fixAll": true
+    },
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+
+    // node_modulesをファイル一覧から消す
+    "files.exclude": {
+        "**/node_modules": true
+    },
+
+    // Vimモードの設定
+    "vim.useSystemClipboard": true, // yankとクリップボードを同期
+    "vim.hlsearch": true, // vimでsearchした結果をハイライトさせる
 }
