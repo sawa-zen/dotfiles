@@ -1,35 +1,12 @@
 [alias]
-	# いい感じのグラフでログを表示
-	graph = log --graph --oneline --decorate=full
 	st = status
 	ci = commit
-	 # Untracked filesを表示せず，not stagedと，stagedだけの状態を出力する
-	stt = status -uno
-	# 行ごとの差分じゃなくて，単語レベルでの差分を色付きで表示する
-	difff = diff --word-diff
-	tree = log --graph --all --format=\"%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s\"
 [core]
-	editor = nvim -c \"set fenc=utf-8\"
-	excludesfile = ~/.gitignore_global
-[pager]
-	diff =
+	editor = vim
 [user]
-	name = SAWADA Takayoshi
+	name = sawa-zen
 	email = sawadasuiren@gmail.com
 [color]
 	ui = auto
-[credential]
-	helper = osxkeychain
-[ghq]
-  root = ~/develop
-	root = ~/go/src
-[url "git@github.com:"]
-	insteadOf = https://github.com/
-[diff]
-  tool = nvimdiff
-[difftool]
-  prompt = false
-[difftool "nvimdiff"]
-  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 [rebase]
 	autosquash = true
