@@ -1,6 +1,10 @@
 [alias]
 	st = status
 	ci = commit
+	co = !cowsay 'checkoutでbranch移動 老害おめ' && echo "`git switch --create branch`"
+	br = branch
+	sw = switch
+
 [core]
 	editor = vim
 [user]

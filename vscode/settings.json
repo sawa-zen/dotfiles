@@ -1,8 +1,9 @@
 {
-    "window.zoomLevel": 1,
     "editor.minimap.enabled": false, // editorの右側に出るサムネイルみたいなのを消す
-    "editor.tabSize": 2,
-    "editor.wordWrap": "on",
+    "editor.tabSize": 8,
+    "editor.wordWrap": "off",
+    "editor.guides.bracketPairs": true,
+    "editor.bracketPairColorization.enabled": true,
 
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Dark (Molokai)",
@@ -30,5 +31,38 @@
 
     // Vimモードの設定
     "vim.useSystemClipboard": true, // yankとクリップボードを同期
-    "vim.hlsearch": true, // vimでsearchした結果をハイライトさせる
+    "vim.hlsearch": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "editor.cursorStyle": "line",
+    "editor.insertSpaces": false,
+    "editor.lineNumbers": "on",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "javascript.updateImportsOnFileMove.enabled": "always", // vimでsearchした結果をハイライトさせる
+
+    "[ruby]": {
+        "editor.formatOnSave": true
+    },
+    "ruby.format": "rubocop",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.accessibilitySupport": "off",
+    "redhat.telemetry.enabled": true,
+    "window.zoomLevel": 1,
+    "files.associations": {
+        ".env": "plaintext"
+    },
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "editor.inlineSuggest.enabled": true,
+    "emmet.triggerExpansionOnTab": true,
+    "workbench.startupEditor": "none",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
 }
